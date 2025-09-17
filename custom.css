@@ -1,0 +1,31 @@
+/* custom.css – deine lokalen Anpassungen */
+/* Du kannst Farbschema und Abstände hier überschreiben, ohne die Originaldateien zu ändern. */
+
+:root {
+  /* Primärfarbe (Buttons, Links, Akzente) */
+  --template-primary-color: #5c9c0f; /* Beispiel: tricoma.energy-Grün */
+  /* Standard-Schriftfarbe */
+  --template-text-color: #2a2a2a;
+}
+
+/* Beispiel: Header-Hintergrund und Abstand anpassen */
+.header, .hero, .tplus_hero, .section-hero {
+  padding-top: clamp(48px, 8vw, 120px);
+  padding-bottom: clamp(32px, 6vw, 96px);
+}
+
+/* Beispiel: Primärbutton Look vereinheitlichen */
+.button, .btn, .btn-primary, a.button-primary {
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Optional: Bild im Hero responsiv besser einpassen */
+.hero img, .section-hero img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}

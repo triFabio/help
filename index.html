@@ -1,0 +1,2453 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)https://www.tricoma.energy/ -->
+<html lang="de">
+
+<head>
+    <!-- Local preview build generated for offline use. External CSS fixed, hero image adjusted. -->
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+	<title>tricoma.energy - Intelligente Energielsungen</title>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+	<style data-tippy-stylesheet="">.tippy-box[data-animation=fade][data-state=hidden]{opacity:0}[data-tippy-root]{max-width:calc(100vw - 10px)}.tippy-box{position:relative;background-color:#333;color:#fff;border-radius:4px;font-size:14px;line-height:1.4;white-space:normal;outline:0;transition-property:transform,visibility,opacity}.tippy-box[data-placement^=top]>.tippy-arrow{bottom:0}.tippy-box[data-placement^=top]>.tippy-arrow:before{bottom:-7px;left:0;border-width:8px 8px 0;border-top-color:initial;transform-origin:center top}.tippy-box[data-placement^=bottom]>.tippy-arrow{top:0}.tippy-box[data-placement^=bottom]>.tippy-arrow:before{top:-7px;left:0;border-width:0 8px 8px;border-bottom-color:initial;transform-origin:center bottom}.tippy-box[data-placement^=left]>.tippy-arrow{right:0}.tippy-box[data-placement^=left]>.tippy-arrow:before{border-width:8px 0 8px 8px;border-left-color:initial;right:-7px;transform-origin:center left}.tippy-box[data-placement^=right]>.tippy-arrow{left:0}.tippy-box[data-placement^=right]>.tippy-arrow:before{left:-7px;border-width:8px 8px 8px 0;border-right-color:initial;transform-origin:center right}.tippy-box[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-arrow{width:16px;height:16px;color:#333}.tippy-arrow:before{content:"";position:absolute;border-color:transparent;border-style:solid}.tippy-content{position:relative;padding:5px 9px;z-index:1}</style><link rel="SHORTCUT ICON" href="https://www.tricoma.energy/templates/tricoma_energy/Labels/icon.png">
+	<!--
+    <!-- removed external tricoma_energy.css for local preview -->
+-->
+	<link type="text/css" rel="stylesheet" href="./test_files/style.css">
+	<link type="text/css" rel="stylesheet" href="./test_files/universe.css">
+    <link rel="stylesheet" href="./test_files/custom.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+			--primary-blue: #0086dd;
+			--primary-blue-hover: #006bb3;
+			--accent-blue: #00b4ff;
+			--text-dark: #1f2937;
+			--text-predark: #3d4f69;
+			--text-gray: #6b7280;
+			--text-light: #9ca3af;
+			--bg-gray: #f9fafb;
+			--white: #ffffff;
+			--chart-solar: #e0c152;         /* dezentes Gelb fr PV-Ertrag */
+			--chart-netzbezug: #c0392b;     /* gedecktes Rot fr Netzbezug */
+			--chart-klima: #2980b9;         /* gedecktes Blau fr Klimagerte */
+			--chart-heizung: #e59866;       /* warmes Hellrot fr Heizung */
+			--chart-wallbox: #5c5c5c;       /* neutrales Dunkelgrau fr Wallbox */
+			--chart-grundlast: #7f8c8d;     /* Grau fr Grundlast */
+			--chart-einspeisung: #27ae60;   /* Grn fr Einspeisung */
+			--shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+			--shadow-hover: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+			--border-radius: 16px;
+			--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: 'Open Sans';
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-gray);
+        }
+
+        /* Typography */
+        h1 { font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 800; line-height: 1.2; }
+        h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 900; line-height: 1.1; color: var(--text-dark); }
+        h3 { font-size: 1.25rem; font-weight: 600; }
+        p { font-size: 1rem; line-height: 1.7; }
+
+		.text-color-gradient {
+			background: linear-gradient(135deg, var(--primary-blue), #0099ff);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		
+		.text-color-gradient-orange {
+			background: linear-gradient(135deg, #ff7a00, #ff9900);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		
+		.headerfeature {
+			position: relative;
+			padding-left: 24px;
+			text-shadow: 2px 2px 3px #000000;
+		}
+		
+		.headerfeature::before {
+			content: "\2713"; /* Unicode fr ? (&#10003;) */
+			position: absolute;
+			left: 0;
+			top: 0;
+			color: #007bff;
+			font-size: 1.2em;
+		}
+		
+		/* listen */
+		
+			.liste ul {
+			  list-style: none;
+			  padding-left: 0;
+			}
+
+			.liste li {
+			  margin-bottom: 15px;
+			  position: relative;
+			  padding-left: 35px;
+			}
+
+			.liste li::before {
+			  content: "\2713"; /* Unicode fr ? (&#10003;) */
+			  position: absolute;
+			  left: 0;
+			  top: 0;
+			  color: #007bff;
+			  font-size: 1.2em;
+			}
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            min-height: 80px;
+        }
+
+        .logo {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+		    margin: unset;
+    		padding: unset;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: rgba(31, 41, 55, 0.9);
+            font-weight: 500;
+            position: relative;
+            transition: var(--transition);
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+        }
+
+        .nav-link:hover {
+            color: var(--primary-blue);
+            /*text-shadow: 0 1px 3px rgba(0, 134, 221, 0.3);*/
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-blue);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .button {
+            background: linear-gradient(135deg, var(--primary-blue), #0099ff);
+            color: var(--white);
+            padding: 0.6rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            box-shadow: 0 4px 8px rgba(0, 134, 221, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .button:hover {
+            background: linear-gradient(135deg, var(--primary-blue-hover), #0077cc);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 134, 221, 0.4);
+        }
+		
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary-blue), #0099ff);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0, 134, 221, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(135deg, var(--primary-blue-hover), #0077cc);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 134, 221, 0.4);
+        }
+		
+		.cta-button-orange {
+			background: linear-gradient(135deg, #ff7a00, #ff9900); /* satten Orangeton */
+			color: var(--white);
+			padding: 0.75rem 1.5rem;
+			border-radius: 8px;
+			text-decoration: none;
+			font-weight: 600;
+			transition: var(--transition);
+			box-shadow: 0 4px 15px rgba(255, 136, 0, 0.4); /* oranger Shadow */
+			border: 1px solid rgba(255, 255, 255, 0.2);
+		}
+
+		.cta-button-orange:hover {
+			background: linear-gradient(135deg, #e66a00, #ff8800); /* dunkler fr Hover-Effekt */
+			transform: translateY(-2px);
+			box-shadow: 0 8px 25px rgba(255, 136, 0, 0.5); /* intensiverer Shadow beim Hover */
+		}
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+			color: black;
+        }
+
+		/* Content Section */		
+        .content {
+			padding-top: 60px;
+			padding-bottom: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+		
+       /* Hero Section */
+        .hero {
+            <!-- padding: 4rem 2rem 4rem; -->
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 70vh;
+						width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-graphic {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-graphic video {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+
+        .hero-content {
+            text-align: left;
+        }
+
+        .hero h1 {
+            margin-bottom: 1.5rem;
+            background-clip: text;
+            text-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-predark);
+            margin-bottom: 2.5rem;
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+						justify-content: center;
+						align-items: center;
+        }
+
+        .hero-buttons .cta-button {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+		
+        .hero-buttons .cta-button-orange {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+		
+		/*hero header */
+
+		.hero-header {
+		  position: relative;
+		  height: 400px; /* anpassbar nach Bedarf */
+		  background-size: cover;
+		  background-position: center;
+		}
+		.hero-header .overlay {
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		  color: #fff;
+		  text-align: center;
+		  background: rgba(0, 0, 0, 0.4); /* Kontrast fr Lesbarkeit */
+		  padding: 20px 40px;
+		}
+		.hero-header h1 {
+		  margin: 0;
+		  font-size: 2.5em;
+		}
+		.hero-header p {
+		  margin: 0.5em 0 0;
+		  font-size: 1.2em;
+		}
+		
+		
+		/*split Hero*/
+		
+		.split-hero {
+		  display: flex;
+		  flex-wrap: wrap;
+		  align-items: stretch;
+		  width: 100%;
+		  min-height: 500px; /* anpassen */
+		}
+
+		.split-hero__content, .split-hero__image {
+		  flex: 1 1 50%;
+		  box-sizing: border-box;
+		 max-width: 950px;
+		}
+
+		.split-hero__content {
+		  padding: 40px;
+		  display: flex;
+		  flex-direction: column;
+		  justify-content: center;
+		}
+
+		.split-hero__content h1 {
+		  font-size: 2.5em;
+		  margin-bottom: 20px;
+		}
+
+		.split-hero__content p {
+		  font-size: 1.2em;
+		}
+
+		.split-hero__image {
+			position: absolute;
+			right: 0;
+			top: 150px;
+		  overflow: hidden; /* wichtig fr den Mask-Effekt */
+		}
+
+		.split-hero__image img {
+		  width: 100%;
+		  height: 100%;
+		  object-fit: cover;
+
+		  /* Hier passiert der weiche bergang: */
+			-webkit-mask-repeat: no-repeat;
+			-webkit-mask-composite: source-in;
+			-webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 40%), linear-gradient(to right, transparent 5%, black 30%), linear-gradient(to top, transparent 0%, black 20%);
+			-webkit-mask-image: linear-gradient(to bottom, transparent -1%, black 40%), linear-gradient(to right, transparent 5%, black 50%), linear-gradient(to top, transparent 4%, black 40%);
+		}
+
+		/* Responsives Verhalten */
+		@media (max-width: 900px) {
+		
+			.headerfeature-row {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+		
+			.headerfeature {
+				width: fit-content;
+			}
+		
+			.headerfeatures {
+				flex-direction: column !important;
+				gap: unset !important;
+			}
+			
+			.headerfeatures ul {
+				padding: 0;
+			}
+			
+			.headerfeatures ul li {
+				padding: 0;
+			}
+		
+			.headervideo {
+				width: unset !important;
+			}
+		
+		  .split-hero {
+			flex-direction: column;
+		  }
+		  .split-hero__content, .split-hero__image {
+			flex: 1 1 100%;
+		  }
+		  .split-hero__content {
+			order: 1;
+		  }
+		  .split-hero__image {
+			order: 2;
+		  }
+		}
+
+        /* Section Styling */
+        .section {
+            padding: 5rem 0;
+            /*max-width: 1200px;*/
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-footer {
+            text-align: center;
+			margin-top: 3rem;
+        }
+		
+        .section-header h2 {
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+			text-align: center;
+        }
+		
+        .card-icon-img {
+           	height: 105px;
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .card p {
+            color: var(--text-gray);
+        }
+		
+        .card-image {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+			width: 200px;
+        }
+
+        /* Target Groups */
+        .target-group-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+			max-width: 600px;
+        }
+
+        .target-group-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .target-group-image {
+            width: 100%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+			/* filter: grayscale(100%); */
+        }
+
+        .target-group-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+			background: linear-gradient(
+				to bottom,
+				rgba(255, 255, 255, 0.5),  /* oben: halbtransparentes */
+				rgba(0, 0, 0, 0)     /* unten: komplett transparent */
+			  );
+        }
+
+        .target-group-image span {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .target-group-content {
+            padding: 1.5rem;
+        }
+
+        .target-group-content h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .target-group-content p {
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+        }
+
+        .target-group-content ul {
+            list-style: none;
+            space-y: 0.5rem;
+        }
+
+        .target-group-content li {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+		
+        .target-group-content .button {
+            margin-top: 30px; 
+        }
+
+        /* Pricing */
+        .pricing-grid {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            margin-top: 2rem;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            border-top: 4px solid var(--accent-blue);
+        }
+
+        .pricing-card.featured {
+            transform: scale(1.05);
+            border-top-color: #ff9800;
+            box-shadow: var(--shadow-hover);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-8px);
+        }
+
+        .pricing-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .pricing-description {
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features li {
+            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        /* Benefits */
+        .benefits-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            margin-top: 2rem;
+        }
+
+        .feature-box {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 134, 221, 0.1);
+        }
+
+        .feature-box:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            border-color: rgba(0, 134, 221, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+		
+        .feature-icon-img {
+           	height: 70px;
+
+        }
+
+        .feature-box h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-box p {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            line-height: 1.5;
+        }
+
+        .more-features {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: var(--bg-gray);
+            border: 2px dashed rgba(0, 134, 221, 0.3);
+            border-radius: var(--border-radius);
+            color: var(--text-gray);
+        }
+
+        .more-features h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-blue);
+        }
+
+        .more-features h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (min-width: 1200px) {
+            .features-grid {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+
+        .benefit-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .benefit-icon {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+		
+        .benefit-icon-img {
+           	height: 70px;
+
+        }
+
+        /* Contact */
+        .contact {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            margin: 2rem auto;
+            max-width: 600px;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--text-light);
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-blue);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding: 6rem 1rem 3rem;
+            }
+
+            .section {
+                padding: 3rem 1rem;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: none;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+		
+		/* Globale Styles fr alle Textfelder, Selects und Textareas */
+		input[type="text"],
+		input[type="email"],
+		input[type="number"],
+		input[type="tel"],
+		input[type="password"],
+		input[type="url"],
+		input[type="search"],
+		textarea,
+		select {
+		  width: 100%;
+		  padding: 12px 16px;
+		  border: 1px solid #ccc;
+		  border-radius: 8px;
+		  font-size: 16px;
+		  font-family: inherit;
+		  transition: border-color 0.3s, box-shadow 0.3s;
+		  box-sizing: border-box;
+		  background-color: #fff;
+		}
+
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		input[type="number"]:focus,
+		input[type="tel"]:focus,
+		input[type="password"]:focus,
+		input[type="url"]:focus,
+		input[type="search"]:focus,
+		textarea:focus,
+		select:focus {
+		  border-color: #0077ff;
+		  box-shadow: 0 0 8px rgba(0, 119, 255, 0.2);
+		  outline: none;
+		}
+
+		/* Einheitliches Styling fr Labels */
+		label {
+		  display: block;
+		  margin-bottom: 6px;
+		  font-weight: 500;
+		}
+
+		/* Globale Styles fr Buttons */
+		button,
+		input[type="submit"] {
+		  display: inline-block;
+		  padding: 12px 24px;
+		  font-size: 16px;
+		  font-weight: 600;
+		  color: #fff;
+		  background-color: #0077ff;
+		  border: none;
+		  border-radius: 8px;
+		  cursor: pointer;
+		  transition: background-color 0.3s, transform 0.1s;
+		}
+
+		button:hover,
+		input[type="submit"]:hover {
+		  background-color: #005ec2;
+		}
+
+		button:active,
+		input[type="submit"]:active {
+		  transform: scale(0.98);
+		}
+
+		/* Optional: Deaktivierte Buttons */
+		button:disabled,
+		input[type="submit"]:disabled {
+		  background-color: #cccccc;
+		  cursor: not-allowed;
+		}
+		
+        /* Loading Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+		
+		@media (max-width: 768px) {
+			.hero-container {
+				grid-template-columns: 1fr; /* Statt 1fr 1fr */
+				gap: 2rem;
+				text-align: center;
+			}
+
+			.hero-content {
+				text-align: center; /* Text in die Mitte, wirkt auf kleineren Screens besser */
+			}
+		}
+		
+		@media (max-width: 768px) {
+			.nav-menu.active {
+				display: flex;
+				flex-direction: column;
+				position: absolute;
+				top: 110px; /* Hhe der Header-Navigation */
+				right: 0;
+				width: 100%;
+				background: rgba(255, 255, 255, 0.95);
+				gap: 1.5rem;
+				padding: 2rem;
+				box-shadow: var(--shadow);
+				z-index: 999;
+			}
+		}
+		
+		/* tplus */
+		
+		.tplus_bildtext .tplus_column {
+			position: relative;
+		}
+
+		.tplus_container {
+
+			width: 100%;
+		}
+		
+		.tplus_bildtext {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			align-content: center;
+			justify-content: center;
+			align-items: center;
+		}
+
+
+		/* Tabellen */
+
+		.table_layout {
+			border-radius: 12px;
+			border: 1px solid #ECEFF1;
+			background: #FAFAFA;
+		}
+
+		.table_layout .table_header, .table_layout .table_row {
+			display: flex;
+			width: 100%;
+		}
+		.table_layout .table_header .table_th, .table_layout .table_body .table_td {
+			flex-basis: 16.66%;
+			max-width: 16.66%;
+			min-width: 10.66%;
+			padding: 20px;
+			display: flex;
+			width: 100%;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		 .table_layout .table_body .table_row {
+			border-top: 1px solid #ECEFF1;
+		}
+		.table_layout .table_header .table_th.first, .table_layout .table_body .table_td.first {
+			flex-basis: 50%;
+			max-width: 50%;
+			padding-right: 40px;
+			justify-content: flex-start;
+			position: relative;
+		}
+
+		.table_layout .img {
+			height: 28px;
+			min-width: 28px;
+			max-width: 28px;
+			display: block;
+			width: auto;
+			-webkit-mask-size: cover;
+			-webkit-mask-repeat: no-repeat;
+			-webkit-mask-position: center center;
+
+			margin-top: 0px;
+
+
+		}
+
+		.table_td.first > h3 {
+			cursor: pointer;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			padding-right: 40px;
+			font-weight: 700;
+			font-size: 20px;
+			user-select: none;
+		}
+
+		.table_td.first.no_cursor > h3 {
+			cursor: unset;
+			user-select: unset;
+		}
+		
+		.mask_check {
+			-webkit-mask-image: url(/templates/tricoma_energy/Labels/feather_black/check.svg);
+			background-image: linear-gradient(147deg, #5c9c11 10%, #6bb614 25%, #508512 85%);
+		}
+
+		.mask_close {
+			-webkit-mask-image: url(/templates/tricoma_energy/Labels/feather_black/minus.svg);
+			background-image: linear-gradient(128deg, #BDBDBD 25%, #757575 85%);
+		}
+		
+		/* einfuehrung */
+
+		.einfuehrung-container {
+		  display: flex;
+		  flex-wrap: wrap;
+		  gap: 40px;
+		}
+
+		.einfuehrung {
+		  flex: 1 1 220px;
+		  min-width: 220px;
+		}
+
+
+		.einfuehrung-number {
+		  font-size: 20px;
+		  font-weight: 700;
+		  color: var(--primary-blue); /* Orange */
+		  margin-bottom: 10px;
+		  position: relative;
+		  display: inline-block;
+		}
+
+		.einfuehrung-number::after {
+		  content: "";
+		  display: block;
+		  width: 150px;
+		  height: 2px;
+		  background: var(--primary-blue);
+		  margin-top: 10px;
+		}
+
+		.einfuehrung-title {
+		  font-size: 22px;
+		  font-weight: 700;
+		  margin: 20px 0 10px;
+		}
+
+		.einfuehrung-text {
+		  font-size: 16px;
+		  line-height: 1.5;
+		  color: #333;
+		}
+		
+		/* Start Bereich */
+		
+        .start-image {
+            width: 100%;
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+		
+		.start-image img{
+			width:128px;
+		}
+
+        .start-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            
+            z-index: 1;
+        }
+		
+		.start-container {
+		  display: grid;
+		  grid-template-columns: 1fr 1fr;
+		  max-width: 1200px;
+		  margin: 0 auto;
+		  padding: 40px 20px;
+		  gap: 20px;
+		}
+		.start-box {
+		  background: #ffffff;
+		  border-radius: 12px;
+		  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+		  padding: 40px 30px;
+		  transition: transform 0.3s;
+		  cursor: pointer;
+		  text-align: left;
+		}
+		.start-box:hover {
+		  transform: translateY(-5px);
+		}
+		.start-box h2 {
+		  margin-bottom: 20px;
+		  font-size: 28px;
+		  color: #1d1d1f;
+		  text-align: center;
+		}
+		.start-box p {
+		  font-size: 18px;
+		  color: #555;
+		  line-height: 1.4;
+		  margin-bottom: 15px;
+		}
+
+		
+		/* Kontaktformular */
+		
+		.kontaktformular-ueberschrift {
+		  text-align: center;
+		  font-size: 2.5em;
+		  color: #007bff;
+		  text-transform: uppercase;
+		  margin: 40px auto;
+		  max-width: 900px;
+		}
+
+		.kontaktformular-container-all {
+		  max-width: 1200px;
+		  margin: 0 auto 40px auto;
+		  padding: 30px;
+		  background: white;
+		  border-radius: 8px;
+		  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+		  display: flex;
+		  flex-wrap: wrap;
+		  gap: 40px;
+		}
+
+		.kontaktformular-vorteile {
+		  flex: 1;
+		  min-width: 280px;
+		}
+
+		.kontaktformular-vorteile h2 {
+		  margin-top: 0;
+		}
+
+		.kontaktformular-form-container {
+		  flex: 2;
+		  min-width: 320px;
+		}
+
+		.kontaktformular {
+		  display: grid;
+		  grid-template-columns: 1fr 1fr;
+		  gap: 20px;
+		}
+
+		.kontaktformular-group {
+		  display: flex;
+		  flex-direction: column;
+		}
+
+		.kontaktformular-group-full {
+		  grid-column: 1/3;
+		  display: flex;
+		  flex-direction: column;
+		}
+
+		.kontaktformular label {
+		  font-weight: bold;
+		  margin-bottom: 5px;
+		}
+
+		.kontaktformular-checkbox-group {
+		  display: flex;
+		  align-items: flex-start;
+		  gap: 10px;
+		}
+
+		.kontaktformular-checkbox-group input[type="checkbox"] {
+		  margin-top: 5px;
+		}
+
+		.kontaktformular-checkbox-group label {
+		  font-weight: normal;
+		}
+		
+		
+		/* Standards, Funktionsweise */
+		
+			section.standards {
+			  padding: 4rem 0;
+			  position: relative;
+			}
+			.standards h2 {
+			  text-align: center;
+			  font-size: 2.5rem;
+			  margin-bottom: 2rem;
+			}
+			.standards .container {
+			  max-width: 1200px;
+			  margin: 0 auto;
+			  text-align: center;
+			  padding: 0 2rem;
+			  position: relative;
+			}
+			.standards .row {
+			  display: flex;
+			  flex-wrap: wrap;
+			  justify-content: center;
+			  align-items: stretch;
+			  gap: 1.5rem;
+			  position: relative;
+			}
+			.standards .box, .standards .result-box {
+			  flex: 1 1 160px;
+			  display: flex;
+			  flex-direction: column;
+			  justify-content: space-between;
+			  position: relative;
+			}
+			.standards .box {
+			  background: white;
+			  padding: 1.5rem;
+			  border-radius: 12px;
+			  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+			}
+			.standards .box::before {
+			  content: "";
+			  position: absolute;
+			  top: -40px;
+			  left: 50%;
+			  transform: translateX(-50%);
+			  width: 0;
+			  height: 40px;
+			  border-left: 3px dashed #00A1E0;
+			}
+			.standards .box h3 {
+			  font-size: 1.3rem;
+			  margin-bottom: 1rem;
+			}
+			.standards .result-box {
+			  background: #00A1E0;
+			  color: white;
+			  padding: 2rem;
+			  border-radius: 12px;
+			  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+			  margin: 2rem 0;
+			}
+			.standards .result-box h3 {
+			  font-size: 1.6rem;
+			  margin-bottom: 1rem;
+			}
+
+			.konfigurator {
+			  max-width: 900px;
+			  margin: auto;
+			  background: #fff;
+			  border-radius: 12px;
+			  padding: 2rem;
+			  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+			}
+		
+			.konfigurator_anfrage_preisausgabe{
+				text-align: left;
+				margin-top: 3rem;
+				padding: 2rem;
+				background: var(--bg-gray);
+				border: 2px dashed rgba(0, 134, 221, 0.3);
+				border-radius: var(--border-radius);
+			}
+
+			.konfigurator h1 {
+			  font-size: 2rem;
+			  font-weight: bold;
+			  margin-bottom: 0.5rem;
+			}
+
+			.konfigurator .subtitle {
+			  color: #555;
+			  margin-bottom: 2rem;
+			}
+
+			.konfigurator-step h2 {
+			  font-size: 1.5rem;
+			  margin-bottom: 0.2rem;
+			}
+
+			.konfigurator-step .step-desc {
+			  color: #777;
+			  margin-bottom: 1.5rem;
+			}
+
+			/* === Preisbox Styles === */
+			#konfigurator_preisbox {
+			  position: fixed;
+			  top: 20px;
+			  right: 20px;
+			  background-color: #ffffff;
+			  color: #000000;
+			  border: 2px solid #007bff;
+			  border-radius: 10px;
+			  padding: 12px 20px;
+			  font-size: 1.0em;
+			  font-weight: bold;
+			  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+			  z-index: 9999;
+			  max-width: 300px;
+			  display: flex;
+			  align-items: center;
+			  justify-content: space-between;
+			  gap: 10px;
+			}
+		
+			.konfigurator_chart-container {
+			  max-width: 1100px;
+			  margin: 0 auto;
+			  padding: 20px;
+			}
+
+			.konfigurator_chart-title {
+			  text-align: center;
+			  font-size: 36px;
+			  font-weight: 700;
+			  color: #2c3e50;
+			  margin-bottom: 40px;
+			  letter-spacing: 0.5px;
+			  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+			}
+
+			.konfigurator_chart {
+			  display: grid;
+			  grid-template-columns: repeat(12, 1fr);
+			  gap: 10px;
+			  height: 300px;
+			  border-left: 2px solid #BDC3C7;
+			  border-bottom: 2px solid #BDC3C7;
+			  background: #fff;
+			  padding: 10px;
+			}
+
+			.konfigurator_bar-pair {
+			  display: flex;
+			  flex-direction: column;
+			  justify-content: flex-end;
+			  align-items: center;
+			  height: 100%;
+			}
+
+			.konfigurator_bar {
+			  display: flex;
+			  width: 100%;
+			  gap: 4px;
+			  align-items: flex-end;
+			  height: 100%;
+			}
+
+			.konfigurator_bar-inner {
+			  flex: 1;
+			  display: flex;
+			  flex-direction: column;
+			  justify-content: flex-end;
+			  align-items: center;
+			  height: 100%;
+			}
+
+			.konfigurator_bar-rect {
+			  width: 100%;
+			  height: 80%;
+			  display: flex;
+			  flex-direction: column;
+			  border-radius: 8px 8px 0 0;
+			  overflow: hidden;
+			}
+
+			.konfigurator_bar-netzbezug {
+			  height: 40%;
+			  background: var(--chart-netzbezug);
+			  border-radius: 8px 8px 0 0;
+			}
+
+			.konfigurator_bar-solar {
+			  height: 60%;
+			  background: var(--chart-solar);
+			}
+
+			.konfigurator_stackbar {
+			  width: 100%;
+			  height: 80%;
+			  display: flex;
+			  flex-direction: column;
+			  border-radius: 8px 8px 0 0;
+			  overflow: hidden;
+			}
+
+			.konfigurator_stack-segment {
+			  width: 100%;
+			}
+		
+			.konfigurator_tabelle_zeile{
+				padding: 8px; 
+				border: 1px solid #ccc;
+			}
+		
+			.konfigurator_tabelle_ergebnis{
+				padding: 8px; 
+				border: 1px solid #ccc;
+				font-weight: 700;
+			}
+		
+
+			.konfigurator_stack-einspeisung { background: var(--chart-einspeisung); height: 20%; }
+			.konfigurator_stack-heizung { background: var(--chart-heizung); height: 25%; }
+			.konfigurator_stack-klima { background: var(--chart-klima); height: 15%; }
+			.konfigurator_stack-wallbox { background: var(--chart-wallbox); height: 20%; }
+			.konfigurator_stack-grundlast { background: var(--chart-grundlast); height: 20%; }
+
+			.konfigurator_bar-label {
+			  margin-top: 5px;
+			  font-size: 12px;
+			  color: #7F8C8D;
+			  text-align: center;
+			}
+
+			.konfigurator_legend {
+			  margin-top: 30px;
+			  display: flex;
+			  justify-content: center;
+			  gap: 20px;
+			  flex-wrap: wrap;
+			  font-size: 14px;
+			}
+
+			.konfigurator_legend-item {
+			  display: flex;
+			  align-items: center;
+			  gap: 8px;
+			}
+
+			.konfigurator_legend-color {
+			  width: 20px;
+			  height: 20px;
+			  border-radius: 4px;
+			}
+		
+		
+		.konfigurator_legend-separator {
+			width: 100%;
+			height: 1px;
+			background: #ccc;
+			margin: 10px 0;
+		}
+		.konfigurator_legend {
+			margin-top: 30px;
+			display: flex;
+			justify-content: center;
+			gap: 30px;
+			flex-wrap: nowrap;
+			font-size: 14px;
+			align-items: flex-start;
+		}
+
+		.konfigurator_legend-block {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		.konfigurator_legend-separator-vertical {
+			width: 1px;
+			background: #ccc;
+			margin: 0 20px;
+			display: block;
+			align-self: stretch;
+		}
+
+		.konfigurator_legend-separator-vertical {
+			display: block;
+			width: 1px;
+			background: #ccc;
+			margin: 0 20px;
+		}
+		
+			.konfigurator_toggle-container {
+			display: flex;
+			justify-content: center;
+			gap: 12px;
+			margin-bottom: 20px;
+		  }
+
+		  .konfigurator_toggle-button {
+			padding: 10px 18px;
+			font-size: 14px;
+			border: 1px solid #ccc;
+			background-color: #f9f9f9;
+			border-radius: 6px;
+			cursor: pointer;
+			transition: background-color 0.2s, border-color 0.2s;
+		  }
+
+		  .konfigurator_toggle-button:hover {
+			background-color: #eaeaea;
+		  }
+
+		  .konfigurator_toggle-active {
+			background-color: #2c3e50;
+			color: #fff;
+			border-color: #2c3e50;
+		  }
+
+		  .konfigurator_bar-value {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 9px;
+			color: #fff;
+			font-weight: 300;
+			white-space: nowrap;
+			pointer-events: none;
+		  }
+		
+		  .konfigurator_bar-netzbezug,
+		  .konfigurator_bar-solar,
+		  .konfigurator_stack-einspeisung,
+		  .konfigurator_stack-heizung,
+		  .konfigurator_stack-klima,
+		  .konfigurator_stack-wallbox,
+		  .konfigurator_stack-grundlast {
+			position: relative;
+		  }
+		
+			@media (max-width: 600px) {
+			  #konfigurator_preisbox {
+				left: 10px;
+				right: 10px;
+				top: 100px;
+				height: 100px;
+				font-size: 1em;
+				padding: 10px 16px;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 6px;
+			  }
+			}
+
+			.options {
+			  display: flex;
+			  gap: 1rem;
+			  flex-wrap: wrap;
+			  justify-content: space-between;
+			}
+
+			.option-card {
+			  flex: 1 1 calc(20% - 1rem);
+			  min-width: 220px;
+			  background: #fff;
+			  border: 2px solid #ddd;
+			  border-radius: 12px;
+			  text-align: center;
+			  padding: 1rem 0.5rem;
+			  cursor: pointer;
+			  transition: all 0.3s ease;
+			}
+
+			.option-card:hover {
+			  border-color: #ff9900;
+			  transform: translateY(-4px);
+			  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+			}
+
+			.option-card.active {
+			  border-color: #ff9900;
+			  background: #fff7e6;
+			}
+
+			.option-card img {
+			  max-height: 60px;
+			  margin-bottom: 0.5rem;
+			}
+
+			.option-title {
+			  font-size: 0.9rem;
+			  font-weight: 600;
+			}
+
+			.option-text {
+			  font-size: 0.8rem;
+			  font-weight: 400;
+			}
+		
+			.navigation {
+			  display: flex;
+			  align-items: center;
+			  justify-content: space-between;
+			  margin-top: 2rem;
+			}
+
+			.btn {
+				padding: 0.8rem 1.5rem;
+				font-size: 1rem;
+				border: none;
+				border-radius: 8px;
+				background: linear-gradient(135deg, var(--primary-blue), #0099ff);
+				color: var(--white);
+				cursor: pointer;
+				transition: background 0.3s ease;
+			}
+
+			.btn:hover:not(.btn-disabled) {
+			  background: linear-gradient(1deg, var(--primary-blue), #0099ff);
+			}
+
+			.btn-disabled {
+			  background: #ccc;
+			  cursor: not-allowed;
+			}
+
+			.progress {
+			  flex: 1;
+			  height: 8px;
+			  margin: 0 1rem;
+			  background: #eee;
+			  border-radius: 4px;
+			  overflow: hidden;
+			}
+
+			.progress-bar {
+			  height: 100%;
+			  background: linear-gradient(135deg, var(--primary-blue), #0099ff);
+			  width: 0;
+			  transition: width 0.3s ease;
+			}
+
+		/* Schriftart Open Sans */
+
+		@font-face {
+		  font-family: 'Open Sans';
+		  font-style: normal;
+		  font-weight: 300;
+		  src: url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-300.eot);
+		  src: local(''),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-300.eot?#iefix) format('embedded-opentype'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-300.woff2) format('woff2'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-300.woff) format('woff'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-300.ttf) format('truetype'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-300.svg#OpenSans) format('svg');
+		  font-display: swap;
+		}
+
+		@font-face {
+		  font-family: 'Open Sans';
+		  font-style: italic;
+		  font-weight: 300;
+		  src: url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-300italic.eot);
+		  src: local(''),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-300italic.eot?#iefix) format('embedded-opentype'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-300italic.woff2) format('woff2'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-300italic.woff) format('woff'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-300italic.ttf) format('truetype'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-300italic.svg#OpenSans) format('svg');
+		  font-display: swap;
+		}
+
+		@font-face {
+		  font-family: 'Open Sans';
+		  font-style: normal;
+		  font-weight: 400;
+		  src: url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-regular.eot);
+		  src: local(''),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-regular.eot?#iefix) format('embedded-opentype'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-regular.woff2) format('woff2'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-regular.woff) format('woff'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-regular.ttf) format('truetype'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-regular.svg#OpenSans) format('svg');
+		  font-display: swap;
+		}
+
+		@font-face {
+		  font-family: 'Open Sans';
+		  font-style: italic;
+		  font-weight: 400;
+		  src: url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-italic.eot);
+		  src: local(''),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-italic.eot?#iefix) format('embedded-opentype'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-italic.woff2) format('woff2'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-italic.woff) format('woff'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-italic.ttf) format('truetype'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-italic.svg#OpenSans) format('svg');
+		  font-display: swap;
+		}
+
+		@font-face {
+		  font-family: 'Open Sans';
+		  font-style: normal;
+		  font-weight: 600;
+		  src: url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-600.eot);
+		  src: local(''),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-600.eot?#iefix) format('embedded-opentype'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-600.woff2) format('woff2'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-600.woff) format('woff'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-600.ttf) format('truetype'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-600.svg#OpenSans) format('svg');
+		  font-display: swap;
+		}
+
+		@font-face {
+		  font-family: 'Open Sans';
+		  font-style: italic;
+		  font-weight: 600;
+		  src: url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-600italic.eot);
+		  src: local(''),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-600italic.eot?#iefix) format('embedded-opentype'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-600italic.woff2) format('woff2'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-600italic.woff) format('woff'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-600italic.ttf) format('truetype'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-600italic.svg#OpenSans) format('svg');
+		  font-display: swap;
+		}
+
+		@font-face {
+		  font-family: 'Open Sans';
+		  font-style: normal;
+		  font-weight: 700;
+		  src: url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-700.eot);
+		  src: local(''),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-700.eot?#iefix) format('embedded-opentype'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-700.woff2) format('woff2'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-700.woff) format('woff'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-700.ttf) format('truetype'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-700.svg#OpenSans) format('svg');
+		  font-display: swap;
+		}
+
+		@font-face {
+		  font-family: 'Open Sans';
+		  font-style: italic;
+		  font-weight: 700;
+		  src: url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-700italic.eot);
+		  src: local(''),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-700italic.eot?#iefix) format('embedded-opentype'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-700italic.woff2) format('woff2'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-700italic.woff) format('woff'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-700italic.ttf) format('truetype'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-700italic.svg#OpenSans) format('svg');
+		  font-display: swap;
+		}
+
+		@font-face {
+		  font-family: 'Open Sans';
+		  font-style: normal;
+		  font-weight: 800;
+		  src: url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-800.eot);
+		  src: local(''),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-800.eot?#iefix) format('embedded-opentype'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-800.woff2) format('woff2'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-800.woff) format('woff'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-800.ttf) format('truetype'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-800.svg#OpenSans) format('svg');
+		  font-display: swap;
+		}
+
+		@font-face {
+		  font-family: 'Open Sans';
+		  font-style: italic;
+		  font-weight: 800;
+		  src: url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-800italic.eot);
+		  src: local(''),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-800italic.eot?#iefix) format('embedded-opentype'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-800italic.woff2) format('woff2'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-800italic.woff) format('woff'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-800italic.ttf) format('truetype'),
+			   url(/templates/tricoma_energy/css/fonts/open-sans-v18-latin-800italic.svg#OpenSans) format('svg');
+		  font-display: swap;
+		}
+		
+		
+		
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(20px) saturate(180%); border-bottom: 1px solid rgba(255, 255, 255, 0.2); box-shadow: rgba(0, 0, 0, 0.05) 0px 8px 32px;">
+        <nav class="nav-container">
+            <div style="display: flex; align-items: center;">
+				<a href="https://www.tricoma.energy/">
+               		<img src="./test_files/logo.svg" height="80">
+				</a>
+            </div>
+            <ul class="nav-menu">
+				<li><a href="https://www.tricoma.energy/Startseite/" class="nav-link">Startseite</a></li><li><a href="https://www.tricoma.energy/Leistungen/" class="nav-link">Leistungen</a></li><li><a href="https://www.tricoma.energy/Anwendungsfaelle/" class="nav-link">Anwendungsflle</a></li><li><a href="https://www.tricoma.energy/Preise/" class="nav-link">Preise</a></li><li><a href="https://www.tricoma.energy/Case-Study/" class="nav-link">Case Study</a></li><li><a href="https://www.tricoma.energy/Kontakt_1/" class="nav-link">Kontakt</a></li><li><a href="https://www.tricoma.energy/Jetzt-starten/" class="cta-button">Jetzt starten</a></li>
+            </ul>
+            <button class="mobile-menu-btn">&#9776;</button>
+        </nav>
+    </header>	
+	
+		<p>    <!-- Hero Section -->
+    </p>
+		<div class="hero">
+				<video autoplay="" loop="" muted="" playsinline="" style="width: 100%; height: 100%; position: absolute;" class="headervideo">
+				  <source src="test_files/Headervideo_Test_Midjurney_20prozent.mp4" type="video/webm">
+				  Dein Browser untersttzt kein HTML5-Video.
+				</video>
+        <div class="animate-fade-in" style="z-index: 2;">
+				<!--<img src="./test_files/Software_Nutzung.png" width="100%">-->
+            <div class="hero-content" style="color: #f9fafb;">
+								<h1 style="color: #f9fafb; text-align: center; text-shadow: 2px 2px 3px #000000;">
+									<div><span style="text-shadow: 2px 2px 3px #000000;">tricoma</span>.<span class="text-color-gradient-orange" style="text-shadow: none;">energy</span></div>
+									<div id="word-slider" class="splide" style="width: 100%; height: 1.6em; overflow:hidden;">
+									<div class="splide__track">
+										<ul class="splide__list">
+											<li class="splide__slide">Smarte Energiesteuerung</li>
+											<li class="splide__slide">Smart Charging System</li>
+											<li class="splide__slide">PV- und Speichercheck</li>
+											<li class="splide__slide">Dynamisches Lastprofil</li>
+											<li class="splide__slide">CO2-Footprint senken</li>
+											<li class="splide__slide">Smart Building Control</li>
+											<li class="splide__slide">Echtzeit Datenanalyse</li>
+											<li class="splide__slide">Batteriekontroll Management </li>
+											<li class="splide__slide">AI Energy Solution dank tricoma.<strong>AI</strong></li>
+										</ul>
+									</div>
+								</div>
+								</h1>
+                <div style="text-align: center; text-shadow: 2px 2px 3px #000000;">Eine Plattform fr deine Energielsung.<br><strong>Energiemanagementsoftware in der Cloud</strong><br><br></div>
+								<div style="display: flex; flex-direction: row; justify-content: space-between; gap: 16px;" class="headerfeatures">
+									<div class="headerfeature-row">
+										<div class="headerfeature">Wallboxanbindung und -abrechnung</div>
+										<div class="headerfeature">Photovoltaik- und Batteriespeichermonitoring</div>
+									</div>
+									<div class="headerfeature-row">
+										<div class="headerfeature">Ansteuerung von Klima- und Heiztechnik</div>
+										<div class="headerfeature">smarte Gebudesteuerung</div>
+									</div>
+								</div>
+                <div class="hero-buttons" style="margin-top: 32px;">
+                    <a href="https://www.tricoma.energy/Preise/" class="cta-button">Pakete vergleichen</a>
+                    <a href="https://www.tricoma.energy/Jetzt-starten/" class="cta-button-orange">Jetzt starten</a>
+                </div>
+            </div>
+        </div>
+    </div>  
+		<section id="funktionsweise" class="standards" style="background: var(--white); padding: 5rem 0;">
+    <div class="container">
+		<div class="section-header">
+		  <h2>Ein zentrales System fr deine Energiesteuerung</h2>
+			<p>tricoma.energy verbindet deine verschiedenen Systeme fr eine globale Steuerung</p>
+		</div>
+      <div class="row">
+        <div class="result-box">
+			<div>
+				<img src="./test_files/Quer_invertiert-Grau.png" height="100" style="filter: grayscale(100%);">
+			</div>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="box">
+			<div>
+				<img src="./test_files/Photovoltaik.svg" alt="Wallbox" height="64">
+			</div>
+          <h3>Wechselrichter / Batteriespeicher</h3>
+          <p>Ertragswerte, Batteriespeicherstand und Regeln fr dein Energiemanagement.</p>
+        </div>
+
+        <div class="box">
+			<div>
+				<img src="./test_files/Wallbox.svg" alt="Wallbox" height="64">
+			</div>
+          <h3>Wallbox</h3>
+          <p>Lastmanagement, Anmeldung, Abrechnung, Zeitsteuerung und vieles mehr.</p>
+        </div>
+
+        <div class="box">
+			<div>
+				<img src="./test_files/Klimatisierung.svg" alt="Wallbox" height="64">
+			</div>
+          <h3>Klima / Heizung</h3>
+          <p>Automatische Steuerung der Heizung, Heizungsregler oder Klimaanlagen.</p>
+        </div>
+
+        <div class="box">
+			<div>
+				<img src="./test_files/Software_Nutzung.png" alt="Wallbox" height="64">
+			</div>
+          <h3>Home Assistant</h3>
+          <p>Im eigenen Gebude<br><em>Quelloffen, erweiterbar, unabhngig</em></p>
+        </div>
+		  
+        <div class="box">
+			<div>
+				<img src="./test_files/Gbaudesteuerung_SmartHome.svg" alt="Wallbox" height="64">
+			</div>
+          <h3>Sonstige Hardware</h3>
+          <p>Anbindung von bekannten Systemen wie Philips Hue, Homematic und tausenden weiteren</p>
+        </div>
+		  
+      </div>
+    </div>
+  </section>
+<!-- Zielgruppen -->
+<section id="zielgruppen" class="section">
+	<div class="container">
+        <div class="section-header">
+            <h2>Unsere Zielgruppen</h2>
+            <p>Mageschneiderte Lsungen fr verschiedene Anwendungsbereiche</p>
+        </div>
+        <div class="card-grid">
+			<div class="target-group-card animate-fade-in" style="cursor: pointer;" onclick="document.location.href=&#39;/Branchen/BueroparksBusiness-Center/&#39;;">
+							<div class="target-group-image target-group-5" style="background-image: url(&#39;/modul.php?modul=tricomaenergyweb&amp;modulkat=element&amp;ID=218&amp;element=0&amp;vorschau=1&#39;);">
+								<span></span>
+							</div>
+							<div class="target-group-content">
+								<h3>Broparks &amp; Business Center</h3>
+								<p>Optimiere die Betriebskosten in deinen Unternehmensgebuden.</p>
+								<div class="liste"><ul class="functions_list w100"><li><span class="img bg_green_gradient mask_check"></span>
+								Mitarbeiter-Ladesulen mit fairer Abrechnung
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Flottenmanagement fr Firmenfahrzeuge
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Integration in bestehende IT-Systeme
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Compliance und Dokumentation
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Skalierbare Lsungen
+								</li></ul></div>
+							</div>
+						</div><div class="target-group-card animate-fade-in" style="cursor: pointer;" onclick="document.location.href=&#39;/Branchen/HotelsHotelketten/&#39;;">
+							<div class="target-group-image target-group-5" style="background-image: url(&#39;/modul.php?modul=tricomaenergyweb&amp;modulkat=element&amp;ID=219&amp;element=0&amp;vorschau=1&#39;);">
+								<span></span>
+							</div>
+							<div class="target-group-content">
+								<h3>Hotels &amp; Hotelketten</h3>
+								<p></p>
+								<div class="liste"><ul class="functions_list w100"><li><span class="img bg_green_gradient mask_check"></span>
+								Gste-Ladestationen mit automatischer Abrechnung
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Integration in Hotelmanagementsysteme
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Zusatzerlse durch Ladegebhren
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Nachhaltigkeitszertifizierung
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Premium-Service fr E-Auto-Fahrer
+								</li></ul></div>
+							</div>
+						</div><div class="target-group-card animate-fade-in" style="cursor: pointer;" onclick="document.location.href=&#39;/Branchen/Lebensmittelmaerkte/&#39;;">
+							<div class="target-group-image target-group-5" style="background-image: url(&#39;/modul.php?modul=tricomaenergyweb&amp;modulkat=element&amp;ID=221&amp;element=0&amp;vorschau=1&#39;);">
+								<span></span>
+							</div>
+							<div class="target-group-content">
+								<h3>Lebensmittelmrkte</h3>
+								<p></p>
+								<div class="liste"><ul class="functions_list w100"><li><span class="img bg_green_gradient mask_check"></span>
+								Flexible Tarifgestaltung (Stunden-/Tagespauschalen)
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Integration in Parkraumbewirtschaftung
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Kundenservice
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Lastmanagement
+								</li></ul></div>
+							</div>
+						</div><div class="target-group-card animate-fade-in" style="cursor: pointer;" onclick="document.location.href=&#39;/Branchen/Charging-Hubs/&#39;;">
+							<div class="target-group-image target-group-5" style="background-image: url(&#39;/modul.php?modul=tricomaenergyweb&amp;modulkat=element&amp;ID=222&amp;element=0&amp;vorschau=1&#39;);">
+								<span></span>
+							</div>
+							<div class="target-group-content">
+								<h3>Charging Hubs</h3>
+								<p></p>
+								<div class="liste"><ul class="functions_list w100"><li><span class="img bg_green_gradient mask_check"></span>
+								Betreiber-Abrechnungssystem
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Dynamisches Lastmanagement
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Roaming-Integration &amp; Backend-Services
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Predictive Maintenance
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								White-Label-Lsungen
+								</li></ul></div>
+							</div>
+						</div><div class="target-group-card animate-fade-in" style="cursor: pointer;" onclick="document.location.href=&#39;/Branchen/ParkhaeuserTiefgaragen/&#39;;">
+							<div class="target-group-image target-group-5" style="background-image: url(&#39;/modul.php?modul=tricomaenergyweb&amp;modulkat=element&amp;ID=223&amp;element=0&amp;vorschau=1&#39;);">
+								<span></span>
+							</div>
+							<div class="target-group-content">
+								<h3>Parkhuser &amp; Tiefgaragen</h3>
+								<p></p>
+								<div class="liste"><ul class="functions_list w100"><li><span class="img bg_green_gradient mask_check"></span>
+								Zoniertes Lastmanagement fr optimale Auslastung
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Flexible Tarifgestaltung (Stunden-/Tagespauschalen)
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Integration in Parkraumbewirtschaftung
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Reservierungssystem fr Ladepltze
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Revenue-Optimierung durch Premium-Stellpltze
+								</li></ul></div>
+							</div>
+						</div><div class="target-group-card animate-fade-in" style="cursor: pointer;" onclick="document.location.href=&#39;/Branchen/Oeffentliche-Einrichtungen/&#39;;">
+							<div class="target-group-image target-group-5" style="background-image: url(&#39;/modul.php?modul=tricomaenergyweb&amp;modulkat=element&amp;ID=224&amp;element=0&amp;vorschau=1&#39;);">
+								<span></span>
+							</div>
+							<div class="target-group-content">
+								<h3>ffentliche Einrichtungen</h3>
+								<p></p>
+								<div class="liste"><ul class="functions_list w100"><li><span class="img bg_green_gradient mask_check"></span>
+								Abrechnungssysteme fr kommunale Ladevorgnge
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Frderfhige Lsungen mit Nachweiskonformitt
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Integration in Gebudemanagementsysteme
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Nutzerverwaltung fr Dienstfahrzeuge
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Energie- &amp; Umweltreporting
+								</li></ul></div>
+							</div>
+						</div>        </div>
+		
+		<div class="more-features">
+			<h4>... viele weitere Mglichkeiten warten auf dich.</h4>
+		   <a href="https://www.tricoma.energy/Anwendungsfaelle/" class="cta-button" style="margin-top: 1.5rem; display: inline-block;">Alle Anwendungsflle kennenlernen</a>
+		</div>
+	</div>		
+</section>
+<!-- Pakete -->
+<section id="pakete" style="background: var(--white); padding: 5rem 0;">
+	<div class="container">
+        <div class="section">
+            <div class="section-header">
+                <h2>Unsere Pakete</h2>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-title">Wallbox</div>
+                    <div class="pricing-price">ab 0<span style="font-size: 1rem; font-weight: normal;"> / Monat</span></div>
+                    <p class="pricing-description">Ideal fr kleine Unternehmen oder Vermieter mit wenigen Ladepunkten.</p>
+					<div class="liste">
+						<ul class="pricing-features">
+							<li>Webportal-Nutzung</li>
+							<li>Abrechnungssystem fr bis zu 3 Wallboxen</li>
+							<li>Grundlegendes Energiemonitoring</li>
+							
+						</ul>
+					</div>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-title">Wallbox und Energiemanagement</div>
+                    <div class="pricing-price" ab="">ab 19<span style="font-size: 1rem; font-weight: normal;"> / Monat</span></div>
+                    <p class="pricing-description">Fr mittlere Unternehmen mit erweiterten Anforderungen.</p>
+					<div class="liste">
+						<ul class="pricing-features">
+							<li>Webportal-Nutzung</li>
+							<li>Abrechnungssystem fr bis zu 15 Wallboxen</li>
+							<li>Anbindung Home Assistant</li>
+							<li>Gebudesteuerung (Klima/Wrme)</li>
+							<li>Intelligente PV-Steuerung &amp; berschussladen</li>
+						</ul>
+					</div>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-title">tricoma ERP</div>
+                    <div class="pricing-price">ab 59<span style="font-size: 1rem; font-weight: normal;"> / Monat</span></div>
+                    <p class="pricing-description">Fr Konzerne, Wohnanlagen und professionelle Betreiber.</p>
+					<div class="liste">
+						<ul class="pricing-features">
+							<li>tricoma smart ERP Lsung enthalten</li>
+							<li>Alle funktionen aus den anderen Paketen</li>
+							<li>Unbegrenzte Anzahl an Ladepunkten</li>
+							<li>Vollautomatisiertes Lastmanagement</li>
+							<li>Multi-Mandantenfhigkeit</li>
+							<li>Individuelle Integrationen &amp; SLA</li>
+						</ul>
+					</div>
+                </div>
+            </div>
+			
+			<div class="section-footer">
+				<a href="https://www.tricoma.energy/Features/Alle-Features/" class="cta-button">Detailierter Paketvergleich</a>
+			</div>
+        </div>
+	</div>
+</section><!-- Vorteile -->
+<section id="vorteile" class="section">
+	<div class="container">
+        <div class="section-header">
+            <h2>Warum tricoma.energy?</h2>
+            <p>Messbare Vorteile fr Ihr Unternehmen</p>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <span class="benefit-icon"><img src="./test_files/Kosteneinsparung.svg" class="benefit-icon-img"></span>
+                <h3>Kosteneinsparung</h3>
+                <p>Durchschnittliche Reduzierung der Energiekosten durch intelligente Steuerung</p>
+            </div>
+            <div class="benefit-card">
+                <span class="benefit-icon"><img src="./test_files/24-7-Monitoring.svg" class="benefit-icon-img"></span>
+                <h3>24/7 Monitoring</h3>
+                <p>Rund-um-die-Uhr berwachung und automatische Optimierung</p>
+            </div>
+            <div class="benefit-card">
+                <span class="benefit-icon"><img src="./test_files/Transparent.svg" class="benefit-icon-img"></span>
+                <h3>Transparent</h3>
+                <p>Vollstndige Transparenz bei Verbrauch und Abrechnung</p>
+            </div>
+            <div class="benefit-card">
+                <span class="benefit-icon"><img src="./test_files/Setup.svg" class="benefit-icon-img"></span>
+                <h3>Setup</h3>
+                <p>Schnelle Implementierung und Inbetriebnahme</p>
+            </div>
+        </div>
+	</div>
+</section>
+<!-- Funktionsumfang -->
+<section id="funktionen" style="background: var(--white); padding: 5rem 0;">
+	<div class="container">
+        <div class="section">
+            <div class="section-header">
+                <h2>Funktionsumfang</h2>
+                <p>Entdecken Sie die vielfltigen Mglichkeiten unserer intelligenten Energieplattform</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="./test_files/Live-Dashboard.svg" class="feature-icon-img"></span>
+                    <h4>Live-Dashboard</h4>
+                    <p>Echtzeitberwachung aller Verbrauchsdaten und Systemzustnde</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="./test_files/RFID-und-App-Zugang.svg" class="feature-icon-img"></span>
+                    <h4>RFID &amp; App-Zugang</h4>
+                    <p>Sichere Authentifizierung ber Karten oder mobile App</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="./test_files/Automatische-Abrechnung.svg" class="feature-icon-img"></span>
+                    <h4>Automatische Abrechnung</h4>
+                    <p>Monatliche Rechnungsstellung mit detaillierter Aufschlsselung</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="./test_files/Dynamisches-Lastenmanagement.svg" class="feature-icon-img"></span>
+                    <h4>Dynamisches Lastmanagement</h4>
+                    <p>Intelligente Verteilung der verfgbaren Leistung</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="./test_files/PV-Ueberschussladen.svg" class="feature-icon-img"></span>
+                    <h4>PV-berschussladen</h4>
+                    <p>Optimale Nutzung von selbst erzeugtem Solarstrom</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="./test_files/Mobile-App.svg" class="feature-icon-img"></span>
+                    <h4>Mobile Nutzung</h4>
+                    <p>Fernsteuerung und Monitoring ber iOS/Android</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="./test_files/API-Schnittstellen.svg" class="feature-icon-img"></span>
+                    <h4>API-Schnittstellen</h4>
+                    <p>Integration in bestehende Systeme und Drittsoftware</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="./test_files/Verbrauchsanalysen.svg" class="feature-icon-img"></span>
+                    <h4>Verbrauchsanalyse</h4>
+                    <p>Detaillierte Reports und Trend-Analysen</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="./test_files/Smart-Home-Integration.svg" class="feature-icon-img"></span>
+                    <h4>Smart Home Integration</h4>
+                    <p>Vernetzung mit Heizung, Klima und Wrmepumpe</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="./test_files/Benachrichtigungen.svg" class="feature-icon-img"></span>
+                    <h4>Benachrichtigungen</h4>
+                    <p>Push-Nachrichten und E-Mail-Alerts bei Ereignissen</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="./test_files/Flexible-Tarifmodelle.svg" class="feature-icon-img"></span>
+                    <h4>Flexible Tarifmodelle</h4>
+                    <p>Zeit- und verbrauchsabhngige Abrechnungsoptionen</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="./test_files/Backup-und-Security.svg" class="feature-icon-img"></span>
+                    <h4>Backup &amp; Security</h4>
+                    <p>Automatische Datensicherung und Verschlsselung</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="./test_files/Terminplanung.svg" class="feature-icon-img"></span>
+                    <h4>Terminplanung</h4>
+                    <p>Reservierung von Ladepltzen und Zeitfenstern</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="./test_files/Multi-Standort-Verwaltung.svg" class="feature-icon-img"></span>
+                    <h4>Multi-Standort-Verwaltung</h4>
+                    <p>Zentrale Steuerung mehrerer Liegenschaften</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="./test_files/Compliance-Reporting.svg" class="feature-icon-img"></span>
+                    <h4>Compliance-Reporting</h4>
+                    <p>Automatische Berichte fr Behrden und Audits</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="./test_files/Remote-Wartung.svg" class="feature-icon-img"></span>
+                    <h4>Remote-Wartung</h4>
+                    <p>Ferndiagnose und Software-Updates</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="./test_files/Eichrechtskonformitaet.svg" class="feature-icon-img"></span>
+                    <h4>Eichrechtskonformitt</h4>
+                    <p>Rechtssichere Messung nach deutschem Eichrecht</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="./test_files/Roaming-Integration.svg" class="feature-icon-img"></span>
+                    <h4>Roaming-Integration</h4>
+                    <p>Anbindung an ffentliche Ladenetze</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="./test_files/White-Label-Portal.svg" class="feature-icon-img"></span>
+                    <h4>White-Label-Portal</h4>
+                    <p>Individualisierbare Benutzeroberflche</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="./test_files/Predictive-Maintenance.svg" class="feature-icon-img"></span>
+                    <h4>Predictive Maintenance</h4>
+                    <p>Vorausschauende Wartung durch KI-Analyse</p>
+                </div>
+            </div>
+			
+            <div class="more-features">
+                <h4>... und viele weitere Funktionen</h4>
+               <a href="https://www.tricoma.energy/Leistungen/" class="cta-button" style="margin-top: 1.5rem; display: inline-block;">Alle Funktionen kennenlernen</a>
+			</div>
+        </div>
+	</div>
+</section>    <!-- Leistungen -->
+<section id="leistungen">
+	<div class="container">
+        <div class="section">
+            <div class="section-header">
+                <h2>Unsere Leistungen</h2>
+                <p>Modular. Smart. Effizient. Unsere Lsungen im berblick:</p>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <span class="card-icon"><img src="./test_files/Wallbox-Abrechnung.svg" class="card-icon-img"></span>
+                    <h3>Wallbox-Abrechnung</h3>
+                    <p>Automatisierte und rechtssichere Abrechnung von Ladevorgngen fr Mitarbeiter und Mieter ? einfach und transparent.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon"><img src="./test_files/Energiemanagement.svg" class="card-icon-img"></span>
+                    <h3>Energiemanagement</h3>
+                    <p>Intelligente Steuerung von PV-Anlagen, berschussladen und Lastmanagement ? fr maximale Energieeffizienz.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon"><img src="./test_files/Gebaudesteuerung.svg" class="card-icon-img"></span>
+                    <h3>Gebudesteuerung</h3>
+                    <p>Nahtlose Integration von Klima-, Heiz- und Wrmepumpensystemen ? fr ein smartes und nachhaltiges Gebude.</p>
+                </div>
+            </div>
+        </div>
+	</div>
+</section><p></p>
+
+    <!-- Kontakt -->
+    <section id="kontakt" style="background: var(--text-predark); padding: 1rem 0;">
+        <div class="section">
+            <div style="text-align: center;">
+                <h2 style="color: white;">Jetzt unverbindlich beraten lassen</h2>
+                <p style="color: white;">Lassen Sie sich zeigen, wie Sie mit tricoma.energy Kosten sparen und gleichzeitig Ihre Nachhaltigkeitsziele erreichen.</p>
+                <a href="mailto:kontakt@tricoma.energy" class="cta-button" style="margin-top: 1.5rem; display: inline-block;">E-Mail schreiben</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+				<p>Intelligente Softwarelsungen fr Energie, Mobilitt &amp; Gebudesteuerung. Made in Germany.<br><br></p>
+				
+				<p>
+					<img src="./test_files/made_in_germany_weiss.svg" height="60">
+				</p>
+				
+            </div>
+            <div class="footer-section">
+                <h4>Produkte</h4>
+                <ul class="footer-links">
+                    <li><a href="https://www.tricoma.energy/Features/Individualisierte-Abrechnung/">Wallbox Abrechnungssystem</a></li><li><a href="https://www.tricoma.energy/Features/Alle-Features/">Alle Features</a></li><li><a href="https://www.tricoma.energy/Branchen/BueroparksBusiness-Center/">Broparks &amp; Business Center</a></li><li><a href="https://www.tricoma.energy/Branchen/HotelsHotelketten/">Hotels &amp; Hotelketten</a></li><li><a href="https://www.tricoma.energy/Branchen/Oeffentliche-Einrichtungen/">ffentliche Einrichtungen</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Unternehmen</h4>
+                <ul class="footer-links">
+                     <li><a href="https://www.tricoma.energy/Impressum/">Impressum</a></li><li><a href="https://www.tricoma.energy/AGB/">AGB</a></li><li><a href="https://www.tricoma.energy/220ber-uns/">ber uns</a></li><li><a href="https://www.tricoma.energy/Datenschutz/">Datenschutz</a></li><li><a href="https://www.tricoma.energy/Konfigurator/">Konfigurator</a></li><li><a href="https://www.tricoma.energy/Cookie-Einstellungen/">Cookie-Einstellungen</a></li><li><a href="https://www.tricoma.energy/Prognose/">Prognose</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <p><img src="./test_files/Quer_invertiert-Grau.png" height="70"></p>
+                <p>info@tricoma.energy</p>
+                <p>+49 (0) 9521 / 703131 - 0</p>
+                <p style="margin-top: 2rem;"> 2025 tricoma.energy</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.25)';
+                header.style.backdropFilter = 'blur(25px) saturate(200%)';
+                header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.3)';
+                header.style.boxShadow = '0 12px 40px rgba(0, 0, 0, 0.08)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.15)';
+                header.style.backdropFilter = 'blur(20px) saturate(180%)';
+                header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.2)';
+                header.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.05)';
+            }
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.card, .target-group-card, .pricing-card, .benefit-card').forEach(el => {
+            observer.observe(el);
+        });
+
+		const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+		const navMenu = document.querySelector('.nav-menu');
+
+		mobileMenuBtn.addEventListener('click', () => {
+			navMenu.classList.toggle('active');
+		});
+	</script>		
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
+
+	<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+	<script>
+		new Splide( '#word-slider', {
+			type      : 'loop',
+			direction : 'ttb',     // top to bottom
+			height    : 'auto',   // gleiche Hhe wie das Container-Div
+			arrows    : false,
+			pagination: false,
+			autoplay  : true,
+			drag: false,
+			interval  : 2000,      // Geschwindigkeit (ms)
+		}).mount();
+	</script>
+</body></html>
