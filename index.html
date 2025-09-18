@@ -3,19 +3,15 @@
 <html lang="de">
 
 <head>
-    <!-- Local preview build generated for offline use. External CSS fixed, hero image adjusted. -->
 	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
-	<title>tricoma.energy - Intelligente Energielsungen</title>
+	<title>tricoma.energy - Intelligente Energielösungen</title>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 	<style data-tippy-stylesheet="">.tippy-box[data-animation=fade][data-state=hidden]{opacity:0}[data-tippy-root]{max-width:calc(100vw - 10px)}.tippy-box{position:relative;background-color:#333;color:#fff;border-radius:4px;font-size:14px;line-height:1.4;white-space:normal;outline:0;transition-property:transform,visibility,opacity}.tippy-box[data-placement^=top]>.tippy-arrow{bottom:0}.tippy-box[data-placement^=top]>.tippy-arrow:before{bottom:-7px;left:0;border-width:8px 8px 0;border-top-color:initial;transform-origin:center top}.tippy-box[data-placement^=bottom]>.tippy-arrow{top:0}.tippy-box[data-placement^=bottom]>.tippy-arrow:before{top:-7px;left:0;border-width:0 8px 8px;border-bottom-color:initial;transform-origin:center bottom}.tippy-box[data-placement^=left]>.tippy-arrow{right:0}.tippy-box[data-placement^=left]>.tippy-arrow:before{border-width:8px 0 8px 8px;border-left-color:initial;right:-7px;transform-origin:center left}.tippy-box[data-placement^=right]>.tippy-arrow{left:0}.tippy-box[data-placement^=right]>.tippy-arrow:before{left:-7px;border-width:8px 8px 8px 0;border-right-color:initial;transform-origin:center right}.tippy-box[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-arrow{width:16px;height:16px;color:#333}.tippy-arrow:before{content:"";position:absolute;border-color:transparent;border-style:solid}.tippy-content{position:relative;padding:5px 9px;z-index:1}</style><link rel="SHORTCUT ICON" href="https://www.tricoma.energy/templates/tricoma_energy/Labels/icon.png">
-	<!--
-    <!-- removed external tricoma_energy.css for local preview -->
--->
+	<!--<link async type="text/css" rel="stylesheet" href="/templates/tricoma_energy/css/tricoma_energy.css?reload=2024-11-26">-->
 	<link type="text/css" rel="stylesheet" href="./test_files/style.css">
 	<link type="text/css" rel="stylesheet" href="./test_files/universe.css">
-    <link rel="stylesheet" href="./test_files/custom.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
 
     <style>
@@ -34,13 +30,13 @@
 			--text-light: #9ca3af;
 			--bg-gray: #f9fafb;
 			--white: #ffffff;
-			--chart-solar: #e0c152;         /* dezentes Gelb fr PV-Ertrag */
-			--chart-netzbezug: #c0392b;     /* gedecktes Rot fr Netzbezug */
-			--chart-klima: #2980b9;         /* gedecktes Blau fr Klimagerte */
-			--chart-heizung: #e59866;       /* warmes Hellrot fr Heizung */
-			--chart-wallbox: #5c5c5c;       /* neutrales Dunkelgrau fr Wallbox */
-			--chart-grundlast: #7f8c8d;     /* Grau fr Grundlast */
-			--chart-einspeisung: #27ae60;   /* Grn fr Einspeisung */
+			--chart-solar: #e0c152;         /* dezentes Gelb für PV-Ertrag */
+			--chart-netzbezug: #c0392b;     /* gedecktes Rot für Netzbezug */
+			--chart-klima: #2980b9;         /* gedecktes Blau für Klimageräte */
+			--chart-heizung: #e59866;       /* warmes Hellrot für Heizung */
+			--chart-wallbox: #5c5c5c;       /* neutrales Dunkelgrau für Wallbox */
+			--chart-grundlast: #7f8c8d;     /* Grau für Grundlast */
+			--chart-einspeisung: #27ae60;   /* Grün für Einspeisung */
 			--shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
 			--shadow-hover: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
 			--border-radius: 16px;
@@ -79,7 +75,7 @@
 		}
 		
 		.headerfeature::before {
-			content: "\2713"; /* Unicode fr ? (&#10003;) */
+			content: "\2713"; /* Unicode für ? (&#10003;) */
 			position: absolute;
 			left: 0;
 			top: 0;
@@ -101,7 +97,7 @@
 			}
 
 			.liste li::before {
-			  content: "\2713"; /* Unicode fr ? (&#10003;) */
+			  content: "\2713"; /* Unicode für ? (&#10003;) */
 			  position: absolute;
 			  left: 0;
 			  top: 0;
@@ -225,7 +221,7 @@
 		}
 
 		.cta-button-orange:hover {
-			background: linear-gradient(135deg, #e66a00, #ff8800); /* dunkler fr Hover-Effekt */
+			background: linear-gradient(135deg, #e66a00, #ff8800); /* dunkler für Hover-Effekt */
 			transform: translateY(-2px);
 			box-shadow: 0 8px 25px rgba(255, 136, 0, 0.5); /* intensiverer Shadow beim Hover */
 		}
@@ -338,7 +334,7 @@
 		  transform: translate(-50%, -50%);
 		  color: #fff;
 		  text-align: center;
-		  background: rgba(0, 0, 0, 0.4); /* Kontrast fr Lesbarkeit */
+		  background: rgba(0, 0, 0, 0.4); /* Kontrast für Lesbarkeit */
 		  padding: 20px 40px;
 		}
 		.hero-header h1 {
@@ -387,7 +383,7 @@
 			position: absolute;
 			right: 0;
 			top: 150px;
-		  overflow: hidden; /* wichtig fr den Mask-Effekt */
+		  overflow: hidden; /* wichtig für den Mask-Effekt */
 		}
 
 		.split-hero__image img {
@@ -395,7 +391,7 @@
 		  height: 100%;
 		  object-fit: cover;
 
-		  /* Hier passiert der weiche bergang: */
+		  /* Hier passiert der weiche Übergang: */
 			-webkit-mask-repeat: no-repeat;
 			-webkit-mask-composite: source-in;
 			-webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 40%), linear-gradient(to right, transparent 5%, black 30%), linear-gradient(to top, transparent 0%, black 20%);
@@ -862,7 +858,7 @@
             scroll-behavior: smooth;
         }
 		
-		/* Globale Styles fr alle Textfelder, Selects und Textareas */
+		/* Globale Styles für alle Textfelder, Selects und Textareas */
 		input[type="text"],
 		input[type="email"],
 		input[type="number"],
@@ -897,14 +893,14 @@
 		  outline: none;
 		}
 
-		/* Einheitliches Styling fr Labels */
+		/* Einheitliches Styling für Labels */
 		label {
 		  display: block;
 		  margin-bottom: 6px;
 		  font-weight: 500;
 		}
 
-		/* Globale Styles fr Buttons */
+		/* Globale Styles für Buttons */
 		button,
 		input[type="submit"] {
 		  display: inline-block;
@@ -969,7 +965,7 @@
 				display: flex;
 				flex-direction: column;
 				position: absolute;
-				top: 110px; /* Hhe der Header-Navigation */
+				top: 110px; /* Höhe der Header-Navigation */
 				right: 0;
 				width: 100%;
 				background: rgba(255, 255, 255, 0.95);
@@ -1861,7 +1857,7 @@
 				</a>
             </div>
             <ul class="nav-menu">
-				<li><a href="https://www.tricoma.energy/Startseite/" class="nav-link">Startseite</a></li><li><a href="https://www.tricoma.energy/Leistungen/" class="nav-link">Leistungen</a></li><li><a href="https://www.tricoma.energy/Anwendungsfaelle/" class="nav-link">Anwendungsflle</a></li><li><a href="https://www.tricoma.energy/Preise/" class="nav-link">Preise</a></li><li><a href="https://www.tricoma.energy/Case-Study/" class="nav-link">Case Study</a></li><li><a href="https://www.tricoma.energy/Kontakt_1/" class="nav-link">Kontakt</a></li><li><a href="https://www.tricoma.energy/Jetzt-starten/" class="cta-button">Jetzt starten</a></li>
+				<li><a href="https://www.tricoma.energy/Startseite/" class="nav-link">Startseite</a></li><li><a href="https://www.tricoma.energy/Leistungen/" class="nav-link">Leistungen</a></li><li><a href="https://www.tricoma.energy/Anwendungsfaelle/" class="nav-link">Anwendungsfälle</a></li><li><a href="https://www.tricoma.energy/Preise/" class="nav-link">Preise</a></li><li><a href="https://www.tricoma.energy/Case-Study/" class="nav-link">Case Study</a></li><li><a href="https://www.tricoma.energy/Kontakt_1/" class="nav-link">Kontakt</a></li><li><a href="https://www.tricoma.energy/Jetzt-starten/" class="cta-button">Jetzt starten</a></li>
             </ul>
             <button class="mobile-menu-btn">&#9776;</button>
         </nav>
@@ -1872,10 +1868,10 @@
 		<div class="hero">
 				<video autoplay="" loop="" muted="" playsinline="" style="width: 100%; height: 100%; position: absolute;" class="headervideo">
 				  <source src="test_files/Headervideo_Test_Midjurney_20prozent.mp4" type="video/webm">
-				  Dein Browser untersttzt kein HTML5-Video.
+				  Dein Browser unterstützt kein HTML5-Video.
 				</video>
         <div class="animate-fade-in" style="z-index: 2;">
-				<!--<img src="./test_files/Software_Nutzung.png" width="100%">-->
+				<!--<img src="/templates/tricoma_energy/Labels/hero2.png" width="100%">-->
             <div class="hero-content" style="color: #f9fafb;">
 								<h1 style="color: #f9fafb; text-align: center; text-shadow: 2px 2px 3px #000000;">
 									<div><span style="text-shadow: 2px 2px 3px #000000;">tricoma</span>.<span class="text-color-gradient-orange" style="text-shadow: none;">energy</span></div>
@@ -1895,7 +1891,7 @@
 									</div>
 								</div>
 								</h1>
-                <div style="text-align: center; text-shadow: 2px 2px 3px #000000;">Eine Plattform fr deine Energielsung.<br><strong>Energiemanagementsoftware in der Cloud</strong><br><br></div>
+                <div style="text-align: center; text-shadow: 2px 2px 3px #000000;">Eine Plattform für deine Energielösung.<br><strong>Energiemanagementsoftware in der Cloud</strong><br><br></div>
 								<div style="display: flex; flex-direction: row; justify-content: space-between; gap: 16px;" class="headerfeatures">
 									<div class="headerfeature-row">
 										<div class="headerfeature">Wallboxanbindung und -abrechnung</div>
@@ -1903,7 +1899,7 @@
 									</div>
 									<div class="headerfeature-row">
 										<div class="headerfeature">Ansteuerung von Klima- und Heiztechnik</div>
-										<div class="headerfeature">smarte Gebudesteuerung</div>
+										<div class="headerfeature">smarte Gebäudesteuerung</div>
 									</div>
 								</div>
                 <div class="hero-buttons" style="margin-top: 32px;">
@@ -1913,20 +1909,42 @@
             </div>
         </div>
     </div>  
-		<section id="funktionsweise" class="standards" style="background: var(--white); padding: 5rem 0;">
-    <div class="container">
-		<div class="section-header">
-		  <h2>Ein zentrales System fr deine Energiesteuerung</h2>
-			<p>tricoma.energy verbindet deine verschiedenen Systeme fr eine globale Steuerung</p>
-		</div>
-      <div class="row">
-        <div class="result-box">
-			<div>
-				<img src="./test_files/Quer_invertiert-Grau.png" height="100" style="filter: grayscale(100%);">
-			</div>
+</div>  
+<section id="funktionsweise" class="standards" style="background: var(--white); padding: 5rem 0;">
+  <div class="container">
+    <div class="section-header">
+      <h2>Ein zentrales System für deine Energiesteuerung</h2>
+      <p>tricoma.energy verbindet deine verschiedenen Systeme für eine globale Steuerung</p>
+    </div>
+
+    <div class="row">
+      <div class="result-box" style="min-height: 420px;"> <!-- Kastenhöhe anpassbar -->
+        <div>
+          <!-- Größe steuerst du über die .video-size-Klasse -->
+          <video id="energyVid"
+                 class="video-size"
+                 muted
+                 playsinline
+                 autoplay
+                 loop
+                 preload="auto"
+                 style="display:block; margin:0 auto;">
+            <source src="./test_files/tricoma_energy_NEU.webm" type="video/webm">
+            Dein Browser unterstützt kein WebM-Video.
+          </video>
         </div>
       </div>
+    </div>
+<style>
+  /* >>> Größe hier anpassen <<< */
+  /* Variante A: feste Breite, Höhe automatisch */
+  .video-size { width: 560px; height: auto; }
 
+  /* Variante B (optional): responsive volle Breite mit Seitenverhältnis
+     => dafür A auskommentieren und diese beiden aktivieren
+  .video-size { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+  .result-box   { min-height: 0; }  /* Kasten wächst dann mit */
+</style>
       <div class="row">
 
         <div class="box">
@@ -1934,7 +1952,7 @@
 				<img src="./test_files/Photovoltaik.svg" alt="Wallbox" height="64">
 			</div>
           <h3>Wechselrichter / Batteriespeicher</h3>
-          <p>Ertragswerte, Batteriespeicherstand und Regeln fr dein Energiemanagement.</p>
+          <p>Ertragswerte, Batteriespeicherstand und Regeln für dein Energiemanagement.</p>
         </div>
 
         <div class="box">
@@ -1958,7 +1976,7 @@
 				<img src="./test_files/Software_Nutzung.png" alt="Wallbox" height="64">
 			</div>
           <h3>Home Assistant</h3>
-          <p>Im eigenen Gebude<br><em>Quelloffen, erweiterbar, unabhngig</em></p>
+          <p>Im eigenen Gebäude<br><em>Quelloffen, erweiterbar, unabhängig</em></p>
         </div>
 		  
         <div class="box">
@@ -1977,53 +1995,53 @@
 	<div class="container">
         <div class="section-header">
             <h2>Unsere Zielgruppen</h2>
-            <p>Mageschneiderte Lsungen fr verschiedene Anwendungsbereiche</p>
+            <p>Maßgeschneiderte Lösungen für verschiedene Anwendungsbereiche</p>
         </div>
         <div class="card-grid">
 			<div class="target-group-card animate-fade-in" style="cursor: pointer;" onclick="document.location.href=&#39;/Branchen/BueroparksBusiness-Center/&#39;;">
-							<div class="target-group-image target-group-5" style="background-image: url(&#39;/modul.php?modul=tricomaenergyweb&amp;modulkat=element&amp;ID=218&amp;element=0&amp;vorschau=1&#39;);">
+							<div class="target-group-image target-group-5" style="background-image: url(https://www.tricoma.energy/modul.php?modul=tricomaenergyweb&modulkat=element&ID=218&element=0&vorschau=1;);">
 								<span></span>
 							</div>
 							<div class="target-group-content">
-								<h3>Broparks &amp; Business Center</h3>
-								<p>Optimiere die Betriebskosten in deinen Unternehmensgebuden.</p>
+								<h3>Büroparks &amp; Business Center</h3>
+								<p>Optimiere die Betriebskosten in deinen Unternehmensgebäuden.</p>
 								<div class="liste"><ul class="functions_list w100"><li><span class="img bg_green_gradient mask_check"></span>
-								Mitarbeiter-Ladesulen mit fairer Abrechnung
+								Mitarbeiter-Ladesäulen mit fairer Abrechnung
 								</li><li><span class="img bg_green_gradient mask_check"></span>
-								Flottenmanagement fr Firmenfahrzeuge
+								Flottenmanagement für Firmenfahrzeuge
 								</li><li><span class="img bg_green_gradient mask_check"></span>
 								Integration in bestehende IT-Systeme
 								</li><li><span class="img bg_green_gradient mask_check"></span>
 								Compliance und Dokumentation
 								</li><li><span class="img bg_green_gradient mask_check"></span>
-								Skalierbare Lsungen
+								Skalierbare Lösungen
 								</li></ul></div>
 							</div>
 						</div><div class="target-group-card animate-fade-in" style="cursor: pointer;" onclick="document.location.href=&#39;/Branchen/HotelsHotelketten/&#39;;">
-							<div class="target-group-image target-group-5" style="background-image: url(&#39;/modul.php?modul=tricomaenergyweb&amp;modulkat=element&amp;ID=219&amp;element=0&amp;vorschau=1&#39;);">
+							<div class="target-group-image target-group-5" style="background-image: url(https://www.tricoma.energy/modul.php?modul=tricomaenergyweb&modulkat=element&ID=219&element=0&vorschau=1;);">
 								<span></span>
 							</div>
 							<div class="target-group-content">
 								<h3>Hotels &amp; Hotelketten</h3>
 								<p></p>
 								<div class="liste"><ul class="functions_list w100"><li><span class="img bg_green_gradient mask_check"></span>
-								Gste-Ladestationen mit automatischer Abrechnung
+								Gäste-Ladestationen mit automatischer Abrechnung
 								</li><li><span class="img bg_green_gradient mask_check"></span>
 								Integration in Hotelmanagementsysteme
 								</li><li><span class="img bg_green_gradient mask_check"></span>
-								Zusatzerlse durch Ladegebhren
+								Zusatzerlöse durch Ladegebühren
 								</li><li><span class="img bg_green_gradient mask_check"></span>
 								Nachhaltigkeitszertifizierung
 								</li><li><span class="img bg_green_gradient mask_check"></span>
-								Premium-Service fr E-Auto-Fahrer
+								Premium-Service für E-Auto-Fahrer
 								</li></ul></div>
 							</div>
 						</div><div class="target-group-card animate-fade-in" style="cursor: pointer;" onclick="document.location.href=&#39;/Branchen/Lebensmittelmaerkte/&#39;;">
-							<div class="target-group-image target-group-5" style="background-image: url(&#39;/modul.php?modul=tricomaenergyweb&amp;modulkat=element&amp;ID=221&amp;element=0&amp;vorschau=1&#39;);">
+							<div class="target-group-image target-group-5" style="background-image: url(https://www.tricoma.energy/modul.php?modul=tricomaenergyweb&modulkat=element&ID=221&element=0&vorschau=1;);">
 								<span></span>
 							</div>
 							<div class="target-group-content">
-								<h3>Lebensmittelmrkte</h3>
+								<h3>Lebensmittelmärkte</h3>
 								<p></p>
 								<div class="liste"><ul class="functions_list w100"><li><span class="img bg_green_gradient mask_check"></span>
 								Flexible Tarifgestaltung (Stunden-/Tagespauschalen)
@@ -2036,7 +2054,7 @@
 								</li></ul></div>
 							</div>
 						</div><div class="target-group-card animate-fade-in" style="cursor: pointer;" onclick="document.location.href=&#39;/Branchen/Charging-Hubs/&#39;;">
-							<div class="target-group-image target-group-5" style="background-image: url(&#39;/modul.php?modul=tricomaenergyweb&amp;modulkat=element&amp;ID=222&amp;element=0&amp;vorschau=1&#39;);">
+							<div class="target-group-image target-group-5" style="background-image: url(https://www.tricoma.energy/modul.php?modul=tricomaenergyweb&modulkat=element&ID=222&element=0&vorschau=1;);">
 								<span></span>
 							</div>
 							<div class="target-group-content">
@@ -2051,43 +2069,43 @@
 								</li><li><span class="img bg_green_gradient mask_check"></span>
 								Predictive Maintenance
 								</li><li><span class="img bg_green_gradient mask_check"></span>
-								White-Label-Lsungen
+								White-Label-Lösungen
 								</li></ul></div>
 							</div>
 						</div><div class="target-group-card animate-fade-in" style="cursor: pointer;" onclick="document.location.href=&#39;/Branchen/ParkhaeuserTiefgaragen/&#39;;">
-							<div class="target-group-image target-group-5" style="background-image: url(&#39;/modul.php?modul=tricomaenergyweb&amp;modulkat=element&amp;ID=223&amp;element=0&amp;vorschau=1&#39;);">
+							<div class="target-group-image target-group-5" style="background-image: url(https://www.tricoma.energy/modul.php?modul=tricomaenergyweb&modulkat=element&ID=223&element=0&vorschau=1;);">
 								<span></span>
 							</div>
 							<div class="target-group-content">
-								<h3>Parkhuser &amp; Tiefgaragen</h3>
+								<h3>Parkhäuser &amp; Tiefgaragen</h3>
 								<p></p>
 								<div class="liste"><ul class="functions_list w100"><li><span class="img bg_green_gradient mask_check"></span>
-								Zoniertes Lastmanagement fr optimale Auslastung
+								Zoniertes Lastmanagement für optimale Auslastung
 								</li><li><span class="img bg_green_gradient mask_check"></span>
 								Flexible Tarifgestaltung (Stunden-/Tagespauschalen)
 								</li><li><span class="img bg_green_gradient mask_check"></span>
 								Integration in Parkraumbewirtschaftung
 								</li><li><span class="img bg_green_gradient mask_check"></span>
-								Reservierungssystem fr Ladepltze
+								Reservierungssystem für Ladeplätze
 								</li><li><span class="img bg_green_gradient mask_check"></span>
-								Revenue-Optimierung durch Premium-Stellpltze
+								Revenue-Optimierung durch Premium-Stellplätze
 								</li></ul></div>
 							</div>
 						</div><div class="target-group-card animate-fade-in" style="cursor: pointer;" onclick="document.location.href=&#39;/Branchen/Oeffentliche-Einrichtungen/&#39;;">
-							<div class="target-group-image target-group-5" style="background-image: url(&#39;/modul.php?modul=tricomaenergyweb&amp;modulkat=element&amp;ID=224&amp;element=0&amp;vorschau=1&#39;);">
+							<div class="target-group-image target-group-5" style="background-image: url(https://www.tricoma.energy/modul.php?modul=tricomaenergyweb&modulkat=element&ID=224&element=0&vorschau=1;);">
 								<span></span>
 							</div>
 							<div class="target-group-content">
-								<h3>ffentliche Einrichtungen</h3>
+								<h3>Öffentliche Einrichtungen</h3>
 								<p></p>
 								<div class="liste"><ul class="functions_list w100"><li><span class="img bg_green_gradient mask_check"></span>
-								Abrechnungssysteme fr kommunale Ladevorgnge
+								Abrechnungssysteme für kommunale Ladevorgänge
 								</li><li><span class="img bg_green_gradient mask_check"></span>
-								Frderfhige Lsungen mit Nachweiskonformitt
+								Förderfähige Lösungen mit Nachweiskonformität
 								</li><li><span class="img bg_green_gradient mask_check"></span>
-								Integration in Gebudemanagementsysteme
+								Integration in Gebäudemanagementsysteme
 								</li><li><span class="img bg_green_gradient mask_check"></span>
-								Nutzerverwaltung fr Dienstfahrzeuge
+								Nutzerverwaltung für Dienstfahrzeuge
 								</li><li><span class="img bg_green_gradient mask_check"></span>
 								Energie- &amp; Umweltreporting
 								</li></ul></div>
@@ -2095,8 +2113,8 @@
 						</div>        </div>
 		
 		<div class="more-features">
-			<h4>... viele weitere Mglichkeiten warten auf dich.</h4>
-		   <a href="https://www.tricoma.energy/Anwendungsfaelle/" class="cta-button" style="margin-top: 1.5rem; display: inline-block;">Alle Anwendungsflle kennenlernen</a>
+			<h4>... viele weitere Möglichkeiten warten auf dich.</h4>
+		   <a href="https://www.tricoma.energy/Anwendungsfaelle/" class="cta-button" style="margin-top: 1.5rem; display: inline-block;">Alle Anwendungsfälle kennenlernen</a>
 		</div>
 	</div>		
 </section>
@@ -2110,12 +2128,12 @@
             <div class="pricing-grid">
                 <div class="pricing-card">
                     <div class="pricing-title">Wallbox</div>
-                    <div class="pricing-price">ab 0<span style="font-size: 1rem; font-weight: normal;"> / Monat</span></div>
-                    <p class="pricing-description">Ideal fr kleine Unternehmen oder Vermieter mit wenigen Ladepunkten.</p>
+                    <div class="pricing-price">ab €0<span style="font-size: 1rem; font-weight: normal;"> / Monat</span></div>
+                    <p class="pricing-description">Ideal für kleine Unternehmen oder Vermieter mit wenigen Ladepunkten.</p>
 					<div class="liste">
 						<ul class="pricing-features">
 							<li>Webportal-Nutzung</li>
-							<li>Abrechnungssystem fr bis zu 3 Wallboxen</li>
+							<li>Abrechnungssystem für bis zu 3 Wallboxen</li>
 							<li>Grundlegendes Energiemonitoring</li>
 							
 						</ul>
@@ -2123,29 +2141,29 @@
                 </div>
                 <div class="pricing-card featured">
                     <div class="pricing-title">Wallbox und Energiemanagement</div>
-                    <div class="pricing-price" ab="">ab 19<span style="font-size: 1rem; font-weight: normal;"> / Monat</span></div>
-                    <p class="pricing-description">Fr mittlere Unternehmen mit erweiterten Anforderungen.</p>
+                    <div class="pricing-price" ab="">ab €19<span style="font-size: 1rem; font-weight: normal;"> / Monat</span></div>
+                    <p class="pricing-description">Für mittlere Unternehmen mit erweiterten Anforderungen.</p>
 					<div class="liste">
 						<ul class="pricing-features">
 							<li>Webportal-Nutzung</li>
-							<li>Abrechnungssystem fr bis zu 15 Wallboxen</li>
+							<li>Abrechnungssystem für bis zu 15 Wallboxen</li>
 							<li>Anbindung Home Assistant</li>
-							<li>Gebudesteuerung (Klima/Wrme)</li>
-							<li>Intelligente PV-Steuerung &amp; berschussladen</li>
+							<li>Gebäudesteuerung (Klima/Wärme)</li>
+							<li>Intelligente PV-Steuerung &amp; Überschussladen</li>
 						</ul>
 					</div>
                 </div>
                 <div class="pricing-card">
                     <div class="pricing-title">tricoma ERP</div>
-                    <div class="pricing-price">ab 59<span style="font-size: 1rem; font-weight: normal;"> / Monat</span></div>
-                    <p class="pricing-description">Fr Konzerne, Wohnanlagen und professionelle Betreiber.</p>
+                    <div class="pricing-price">ab €59<span style="font-size: 1rem; font-weight: normal;"> / Monat</span></div>
+                    <p class="pricing-description">Für Konzerne, Wohnanlagen und professionelle Betreiber.</p>
 					<div class="liste">
 						<ul class="pricing-features">
-							<li>tricoma smart ERP Lsung enthalten</li>
+							<li>tricoma smart ERP Lösung enthalten</li>
 							<li>Alle funktionen aus den anderen Paketen</li>
 							<li>Unbegrenzte Anzahl an Ladepunkten</li>
 							<li>Vollautomatisiertes Lastmanagement</li>
-							<li>Multi-Mandantenfhigkeit</li>
+							<li>Multi-Mandantenfähigkeit</li>
 							<li>Individuelle Integrationen &amp; SLA</li>
 						</ul>
 					</div>
@@ -2162,7 +2180,7 @@
 	<div class="container">
         <div class="section-header">
             <h2>Warum tricoma.energy?</h2>
-            <p>Messbare Vorteile fr Ihr Unternehmen</p>
+            <p>Messbare Vorteile für Ihr Unternehmen</p>
         </div>
         <div class="benefits-grid">
             <div class="benefit-card">
@@ -2173,12 +2191,12 @@
             <div class="benefit-card">
                 <span class="benefit-icon"><img src="./test_files/24-7-Monitoring.svg" class="benefit-icon-img"></span>
                 <h3>24/7 Monitoring</h3>
-                <p>Rund-um-die-Uhr berwachung und automatische Optimierung</p>
+                <p>Rund-um-die-Uhr Überwachung und automatische Optimierung</p>
             </div>
             <div class="benefit-card">
                 <span class="benefit-icon"><img src="./test_files/Transparent.svg" class="benefit-icon-img"></span>
                 <h3>Transparent</h3>
-                <p>Vollstndige Transparenz bei Verbrauch und Abrechnung</p>
+                <p>Vollständige Transparenz bei Verbrauch und Abrechnung</p>
             </div>
             <div class="benefit-card">
                 <span class="benefit-icon"><img src="./test_files/Setup.svg" class="benefit-icon-img"></span>
@@ -2194,38 +2212,38 @@
         <div class="section">
             <div class="section-header">
                 <h2>Funktionsumfang</h2>
-                <p>Entdecken Sie die vielfltigen Mglichkeiten unserer intelligenten Energieplattform</p>
+                <p>Entdecken Sie die vielfältigen Möglichkeiten unserer intelligenten Energieplattform</p>
             </div>
             <div class="features-grid">
                 <div class="feature-box">
                     <span class="feature-icon"><img src="./test_files/Live-Dashboard.svg" class="feature-icon-img"></span>
                     <h4>Live-Dashboard</h4>
-                    <p>Echtzeitberwachung aller Verbrauchsdaten und Systemzustnde</p>
+                    <p>Echtzeitüberwachung aller Verbrauchsdaten und Systemzustände</p>
                 </div>
                 <div class="feature-box">
                     <span class="feature-icon"><img src="./test_files/RFID-und-App-Zugang.svg" class="feature-icon-img"></span>
                     <h4>RFID &amp; App-Zugang</h4>
-                    <p>Sichere Authentifizierung ber Karten oder mobile App</p>
+                    <p>Sichere Authentifizierung über Karten oder mobile App</p>
                 </div>
                 <div class="feature-box">
                     <span class="feature-icon"><img src="./test_files/Automatische-Abrechnung.svg" class="feature-icon-img"></span>
                     <h4>Automatische Abrechnung</h4>
-                    <p>Monatliche Rechnungsstellung mit detaillierter Aufschlsselung</p>
+                    <p>Monatliche Rechnungsstellung mit detaillierter Aufschlüsselung</p>
                 </div>
                 <div class="feature-box">
                     <span class="feature-icon"><img src="./test_files/Dynamisches-Lastenmanagement.svg" class="feature-icon-img"></span>
                     <h4>Dynamisches Lastmanagement</h4>
-                    <p>Intelligente Verteilung der verfgbaren Leistung</p>
+                    <p>Intelligente Verteilung der verfügbaren Leistung</p>
                 </div>
                 <div class="feature-box">
                     <span class="feature-icon"><img src="./test_files/PV-Ueberschussladen.svg" class="feature-icon-img"></span>
-                    <h4>PV-berschussladen</h4>
+                    <h4>PV-Überschussladen</h4>
                     <p>Optimale Nutzung von selbst erzeugtem Solarstrom</p>
                 </div>
                 <div class="feature-box">
                     <span class="feature-icon"><img src="./test_files/Mobile-App.svg" class="feature-icon-img"></span>
                     <h4>Mobile Nutzung</h4>
-                    <p>Fernsteuerung und Monitoring ber iOS/Android</p>
+                    <p>Fernsteuerung und Monitoring über iOS/Android</p>
                 </div>
                 <div class="feature-box">
                     <span class="feature-icon"><img src="./test_files/API-Schnittstellen.svg" class="feature-icon-img"></span>
@@ -2240,7 +2258,7 @@
                 <div class="feature-box">
                     <span class="feature-icon"><img src="./test_files/Smart-Home-Integration.svg" class="feature-icon-img"></span>
                     <h4>Smart Home Integration</h4>
-                    <p>Vernetzung mit Heizung, Klima und Wrmepumpe</p>
+                    <p>Vernetzung mit Heizung, Klima und Wärmepumpe</p>
                 </div>
                 <div class="feature-box">
                     <span class="feature-icon"><img src="./test_files/Benachrichtigungen.svg" class="feature-icon-img"></span>
@@ -2250,17 +2268,17 @@
                 <div class="feature-box">
                     <span class="feature-icon"><img src="./test_files/Flexible-Tarifmodelle.svg" class="feature-icon-img"></span>
                     <h4>Flexible Tarifmodelle</h4>
-                    <p>Zeit- und verbrauchsabhngige Abrechnungsoptionen</p>
+                    <p>Zeit- und verbrauchsabhängige Abrechnungsoptionen</p>
                 </div>
                 <div class="feature-box">
                     <span class="feature-icon"><img src="./test_files/Backup-und-Security.svg" class="feature-icon-img"></span>
                     <h4>Backup &amp; Security</h4>
-                    <p>Automatische Datensicherung und Verschlsselung</p>
+                    <p>Automatische Datensicherung und Verschlüsselung</p>
                 </div>
                 <div class="feature-box">
                     <span class="feature-icon"><img src="./test_files/Terminplanung.svg" class="feature-icon-img"></span>
                     <h4>Terminplanung</h4>
-                    <p>Reservierung von Ladepltzen und Zeitfenstern</p>
+                    <p>Reservierung von Ladeplätzen und Zeitfenstern</p>
                 </div>
                 <div class="feature-box">
                     <span class="feature-icon"><img src="./test_files/Multi-Standort-Verwaltung.svg" class="feature-icon-img"></span>
@@ -2270,7 +2288,7 @@
                 <div class="feature-box">
                     <span class="feature-icon"><img src="./test_files/Compliance-Reporting.svg" class="feature-icon-img"></span>
                     <h4>Compliance-Reporting</h4>
-                    <p>Automatische Berichte fr Behrden und Audits</p>
+                    <p>Automatische Berichte für Behörden und Audits</p>
                 </div>
                 <div class="feature-box">
                     <span class="feature-icon"><img src="./test_files/Remote-Wartung.svg" class="feature-icon-img"></span>
@@ -2279,18 +2297,18 @@
                 </div>
                 <div class="feature-box">
                     <span class="feature-icon"><img src="./test_files/Eichrechtskonformitaet.svg" class="feature-icon-img"></span>
-                    <h4>Eichrechtskonformitt</h4>
+                    <h4>Eichrechtskonformität</h4>
                     <p>Rechtssichere Messung nach deutschem Eichrecht</p>
                 </div>
                 <div class="feature-box">
                     <span class="feature-icon"><img src="./test_files/Roaming-Integration.svg" class="feature-icon-img"></span>
                     <h4>Roaming-Integration</h4>
-                    <p>Anbindung an ffentliche Ladenetze</p>
+                    <p>Anbindung an öffentliche Ladenetze</p>
                 </div>
                 <div class="feature-box">
                     <span class="feature-icon"><img src="./test_files/White-Label-Portal.svg" class="feature-icon-img"></span>
                     <h4>White-Label-Portal</h4>
-                    <p>Individualisierbare Benutzeroberflche</p>
+                    <p>Individualisierbare Benutzeroberfläche</p>
                 </div>
                 <div class="feature-box">
                     <span class="feature-icon"><img src="./test_files/Predictive-Maintenance.svg" class="feature-icon-img"></span>
@@ -2311,23 +2329,23 @@
         <div class="section">
             <div class="section-header">
                 <h2>Unsere Leistungen</h2>
-                <p>Modular. Smart. Effizient. Unsere Lsungen im berblick:</p>
+                <p>Modular. Smart. Effizient. Unsere Lösungen im Überblick:</p>
             </div>
             <div class="card-grid">
                 <div class="card">
                     <span class="card-icon"><img src="./test_files/Wallbox-Abrechnung.svg" class="card-icon-img"></span>
                     <h3>Wallbox-Abrechnung</h3>
-                    <p>Automatisierte und rechtssichere Abrechnung von Ladevorgngen fr Mitarbeiter und Mieter ? einfach und transparent.</p>
+                    <p>Automatisierte und rechtssichere Abrechnung von Ladevorgängen für Mitarbeiter und Mieter ? einfach und transparent.</p>
                 </div>
                 <div class="card">
                     <span class="card-icon"><img src="./test_files/Energiemanagement.svg" class="card-icon-img"></span>
                     <h3>Energiemanagement</h3>
-                    <p>Intelligente Steuerung von PV-Anlagen, berschussladen und Lastmanagement ? fr maximale Energieeffizienz.</p>
+                    <p>Intelligente Steuerung von PV-Anlagen, Überschussladen und Lastmanagement ? für maximale Energieeffizienz.</p>
                 </div>
                 <div class="card">
                     <span class="card-icon"><img src="./test_files/Gebaudesteuerung.svg" class="card-icon-img"></span>
-                    <h3>Gebudesteuerung</h3>
-                    <p>Nahtlose Integration von Klima-, Heiz- und Wrmepumpensystemen ? fr ein smartes und nachhaltiges Gebude.</p>
+                    <h3>Gebäudesteuerung</h3>
+                    <p>Nahtlose Integration von Klima-, Heiz- und Wärmepumpensystemen ? für ein smartes und nachhaltiges Gebäude.</p>
                 </div>
             </div>
         </div>
@@ -2349,7 +2367,7 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-				<p>Intelligente Softwarelsungen fr Energie, Mobilitt &amp; Gebudesteuerung. Made in Germany.<br><br></p>
+				<p>Intelligente Softwarelösungen für Energie, Mobilität &amp; Gebäudesteuerung. Made in Germany.<br><br></p>
 				
 				<p>
 					<img src="./test_files/made_in_germany_weiss.svg" height="60">
@@ -2359,20 +2377,20 @@
             <div class="footer-section">
                 <h4>Produkte</h4>
                 <ul class="footer-links">
-                    <li><a href="https://www.tricoma.energy/Features/Individualisierte-Abrechnung/">Wallbox Abrechnungssystem</a></li><li><a href="https://www.tricoma.energy/Features/Alle-Features/">Alle Features</a></li><li><a href="https://www.tricoma.energy/Branchen/BueroparksBusiness-Center/">Broparks &amp; Business Center</a></li><li><a href="https://www.tricoma.energy/Branchen/HotelsHotelketten/">Hotels &amp; Hotelketten</a></li><li><a href="https://www.tricoma.energy/Branchen/Oeffentliche-Einrichtungen/">ffentliche Einrichtungen</a></li>
+                    <li><a href="https://www.tricoma.energy/Features/Individualisierte-Abrechnung/">Wallbox Abrechnungssystem</a></li><li><a href="https://www.tricoma.energy/Features/Alle-Features/">Alle Features</a></li><li><a href="https://www.tricoma.energy/Branchen/BueroparksBusiness-Center/">Büroparks &amp; Business Center</a></li><li><a href="https://www.tricoma.energy/Branchen/HotelsHotelketten/">Hotels &amp; Hotelketten</a></li><li><a href="https://www.tricoma.energy/Branchen/Oeffentliche-Einrichtungen/">Öffentliche Einrichtungen</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Unternehmen</h4>
                 <ul class="footer-links">
-                     <li><a href="https://www.tricoma.energy/Impressum/">Impressum</a></li><li><a href="https://www.tricoma.energy/AGB/">AGB</a></li><li><a href="https://www.tricoma.energy/220ber-uns/">ber uns</a></li><li><a href="https://www.tricoma.energy/Datenschutz/">Datenschutz</a></li><li><a href="https://www.tricoma.energy/Konfigurator/">Konfigurator</a></li><li><a href="https://www.tricoma.energy/Cookie-Einstellungen/">Cookie-Einstellungen</a></li><li><a href="https://www.tricoma.energy/Prognose/">Prognose</a></li>
+                     <li><a href="https://www.tricoma.energy/Impressum/">Impressum</a></li><li><a href="https://www.tricoma.energy/AGB/">AGB</a></li><li><a href="https://www.tricoma.energy/220ber-uns/">Über uns</a></li><li><a href="https://www.tricoma.energy/Datenschutz/">Datenschutz</a></li><li><a href="https://www.tricoma.energy/Konfigurator/">Konfigurator</a></li><li><a href="https://www.tricoma.energy/Cookie-Einstellungen/">Cookie-Einstellungen</a></li><li><a href="https://www.tricoma.energy/Prognose/">Prognose</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <p><img src="./test_files/Quer_invertiert-Grau.png" height="70"></p>
                 <p>info@tricoma.energy</p>
                 <p>+49 (0) 9521 / 703131 - 0</p>
-                <p style="margin-top: 2rem;"> 2025 tricoma.energy</p>
+                <p style="margin-top: 2rem;">© 2025 tricoma.energy</p>
             </div>
         </div>
     </footer>
@@ -2442,7 +2460,7 @@
 		new Splide( '#word-slider', {
 			type      : 'loop',
 			direction : 'ttb',     // top to bottom
-			height    : 'auto',   // gleiche Hhe wie das Container-Div
+			height    : 'auto',   // gleiche Höhe wie das Container-Div
 			arrows    : false,
 			pagination: false,
 			autoplay  : true,
