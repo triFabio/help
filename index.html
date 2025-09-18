@@ -1,25 +1,26 @@
-
 <!DOCTYPE html>
+<!-- saved from url=(0027)https://www.tricoma.energy/ -->
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tricoma.energy - Intelligente Energielösungen</title>
-		
-	<link rel="SHORTCUT ICON" href="/templates/tricoma_energy/Labels/icon.png"/>
-	<!--<link async type="text/css" rel="stylesheet" href="/templates/tricoma_energy/css/tricoma_energy.css?reload=2024-11-26">-->
-	<link type="text/css" rel="stylesheet" href="/templates/tricoma_energy/css/bootstrap.css?reload=2024-11-26">
-	<link type="text/css" rel="stylesheet" href="/templates/tricoma_energy/css/style.css?reload=2024-11-26">
-	<link type="text/css" rel="stylesheet" href="/templates/tricoma_energy/css/universe.css?reload=2024-11-26">
-	<script src="/templates/tricoma_energy/js/bootstrap.bundle.min.js"></script>
-    <style>
-		* {
-		    box-sizing: border-box !important;
-			margin: 0;
-			padding: 0;
-		}
 
-		:root {
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+	<title>tricoma.energy - Intelligente Energielsungen</title>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+	<style data-tippy-stylesheet="">.tippy-box[data-animation=fade][data-state=hidden]{opacity:0}[data-tippy-root]{max-width:calc(100vw - 10px)}.tippy-box{position:relative;background-color:#333;color:#fff;border-radius:4px;font-size:14px;line-height:1.4;white-space:normal;outline:0;transition-property:transform,visibility,opacity}.tippy-box[data-placement^=top]>.tippy-arrow{bottom:0}.tippy-box[data-placement^=top]>.tippy-arrow:before{bottom:-7px;left:0;border-width:8px 8px 0;border-top-color:initial;transform-origin:center top}.tippy-box[data-placement^=bottom]>.tippy-arrow{top:0}.tippy-box[data-placement^=bottom]>.tippy-arrow:before{top:-7px;left:0;border-width:0 8px 8px;border-bottom-color:initial;transform-origin:center bottom}.tippy-box[data-placement^=left]>.tippy-arrow{right:0}.tippy-box[data-placement^=left]>.tippy-arrow:before{border-width:8px 0 8px 8px;border-left-color:initial;right:-7px;transform-origin:center left}.tippy-box[data-placement^=right]>.tippy-arrow{left:0}.tippy-box[data-placement^=right]>.tippy-arrow:before{left:-7px;border-width:8px 8px 8px 0;border-right-color:initial;transform-origin:center right}.tippy-box[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-arrow{width:16px;height:16px;color:#333}.tippy-arrow:before{content:"";position:absolute;border-color:transparent;border-style:solid}.tippy-content{position:relative;padding:5px 9px;z-index:1}</style><link rel="SHORTCUT ICON" href="https://www.tricoma.energy/templates/tricoma_energy/Labels/icon.png">
+	<!--<link async type="text/css" rel="stylesheet" href="/templates/tricoma_energy/css/tricoma_energy.css?reload=2024-11-26">-->
+	<link type="text/css" rel="stylesheet" href="style.css">
+	<link type="text/css" rel="stylesheet" href="universe.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/css/splide.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
 			--primary-blue: #0086dd;
 			--primary-blue-hover: #006bb3;
 			--accent-blue: #00b4ff;
@@ -29,81 +30,31 @@
 			--text-light: #9ca3af;
 			--bg-gray: #f9fafb;
 			--white: #ffffff;
-			--chart-solar: #e0c152;         /* dezentes Gelb für PV-Ertrag */
-			--chart-netzbezug: #c0392b;     /* gedecktes Rot für Netzbezug */
-			--chart-klima: #2980b9;         /* gedecktes Blau für Klimageräte */
-			--chart-heizung: #e59866;       /* warmes Hellrot für Heizung */
-			--chart-wallbox: #5c5c5c;       /* neutrales Dunkelgrau für Wallbox */
-			--chart-grundlast: #7f8c8d;     /* Grau für Grundlast */
-			--chart-einspeisung: #27ae60;   /* Grün für Einspeisung */
+			--chart-solar: #e0c152;         /* dezentes Gelb fr PV-Ertrag */
+			--chart-netzbezug: #c0392b;     /* gedecktes Rot fr Netzbezug */
+			--chart-klima: #2980b9;         /* gedecktes Blau fr Klimagerte */
+			--chart-heizung: #e59866;       /* warmes Hellrot fr Heizung */
+			--chart-wallbox: #5c5c5c;       /* neutrales Dunkelgrau fr Wallbox */
+			--chart-grundlast: #7f8c8d;     /* Grau fr Grundlast */
+			--chart-einspeisung: #27ae60;   /* Grn fr Einspeisung */
 			--shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
 			--shadow-hover: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
 			--border-radius: 16px;
 			--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-		}
-
-		body {
-				font-family: 'Open Sans';
-				line-height: 1.6;
-				padding-top: 135px !important;
-				color: var(--text-dark);
-				background-color: var(--bg-gray);
-		}
-
-        .header {
-            height: 135px !important;
-            padding: 8px;
         }
 
-        .cookiebanner {
-            border-radius: 8px !important;
-            overflow: hidden !important;
+        body {
+            font-family: 'Open Sans';
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-gray);
         }
 
-        .cookiebanner_actions {
-            display: flex;
-            flex-direction: row-reverse;
-            gap: 16px;
-            justify-content: space-between;
-            width: 100%;
-        }
-
-        .button.cookiebanner_cookiespeichernalle {
-            background: #0077ff !important;
-        }
-
-        .button.cookiebanner_cookieeinstellungen_button {
-            display: block;
-            background: #c1c1c1 !important;
-            border: 0 !important;
-            box-shadow: none;
-            color: white !important;
-        }
-
-        .button.cookiebanner_cookieeinstellungen_button:hover {
-            transform: none;
-            box-shadow: none;
-        }
-        
-        .button.cookiebanner_cookiespeichern {
-            background-color: #f8990d !important;
-            box-shadow: none;
-            margin: 0 !important;
-            color: white !important;
-            box-shadow: 0 4px 8px rgba(248, 144, 13, 0.3);
-        }
-
-        .button.cookiebanner_cookiespeichern:hover {
-            box-shadow: none;
-            transform: none;
-            box-shadow: 0 8px 25px rgba(248, 144, 13, 0.4);
-        }
-
-		/* Typography */
-		h1 { font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 800; line-height: 1.2; }
-		h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 600; line-height: 1.1; color: var(--text-dark); }
-		h3 { font-size: 1.25rem; font-weight: 600; }
-		p { font-size: 1rem; line-height: 1.7; }
+        /* Typography */
+        h1 { font-size: clamp(2rem, 5vw, 2.6rem); font-weight: 800; line-height: 1.2; }
+        h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 900; line-height: 1.1; color: var(--text-dark); }
+        h3 { font-size: 1.25rem; font-weight: 600; }
+        p { font-size: 1rem; line-height: 1.7; }
 
 		.text-color-gradient {
 			background: linear-gradient(135deg, var(--primary-blue), #0099ff);
@@ -112,33 +63,24 @@
 		}
 		
 		.text-color-gradient-orange {
-			background: linear-gradient(180deg, #ff7a00, #ff9900);
+			background: linear-gradient(135deg, #ff7a00, #ff9900);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
-		}
-		
-		.row::after {
-				content: unset;
 		}
 		
 		.headerfeature {
 			position: relative;
 			padding-left: 24px;
-			text-align: left;
-			<!-- text-shadow: 2px 2px 3px #000000; -->
+			text-shadow: 2px 2px 3px #000000;
 		}
 		
 		.headerfeature::before {
-			content: "\2713"; /* Unicode für ? (&#10003;) */
+			content: "\2713"; /* Unicode fr ? (&#10003;) */
 			position: absolute;
 			left: 0;
 			top: 0;
-			color: #ff7a00;
+			color: #007bff;
 			font-size: 1.2em;
-		}
-		
-		.splide__slide {
-		    overflow: hidden;
 		}
 		
 		/* listen */
@@ -155,7 +97,7 @@
 			}
 
 			.liste li::before {
-			  content: "\2713"; /* Unicode für ? (&#10003;) */
+			  content: "\2713"; /* Unicode fr ? (&#10003;) */
 			  position: absolute;
 			  left: 0;
 			  top: 0;
@@ -172,10 +114,9 @@
             backdrop-filter: blur(20px) saturate(180%);
             -webkit-backdrop-filter: blur(20px) saturate(180%);
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
             z-index: 1000;
             transition: var(--transition);
-            max-width: 100%;
         }
 
         .nav-container {
@@ -184,9 +125,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            /*padding: 1.5rem 2rem;*/
+            padding: 1.5rem 2rem;
             min-height: 80px;
-            height: 100%;;
         }
 
         .logo {
@@ -281,34 +221,19 @@
 		}
 
 		.cta-button-orange:hover {
-			background: linear-gradient(135deg, #e66a00, #ff8800); /* dunkler für Hover-Effekt */
+			background: linear-gradient(135deg, #e66a00, #ff8800); /* dunkler fr Hover-Effekt */
 			transform: translateY(-2px);
 			box-shadow: 0 8px 25px rgba(255, 136, 0, 0.5); /* intensiverer Shadow beim Hover */
 		}
-		
-		.cta-button-gray {
-		    background: #3d4f69;
-		    box-shadow: 0 4px 15px rgba(61, 77, 99, 0.4); /* oranger Shadow */
-		}
 
-        .cta-button-gray:hover {
-			background: #374557;
-			transform: translateY(-2px);
-			box-shadow: 0 8px 25px rgba(48, 58, 71, 0.5); /* intensiverer Shadow beim Hover */
-		}
-
-		.mobile-menu-btn {
-			display: none;
-			background: none;
-			border: none;
-			font-size: 1.5rem;
-			cursor: pointer;
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
 			color: black;
-		}
-		
-		#funktionsweise .row {
-				gap: 40px;
-		}
+        }
 
 		/* Content Section */		
         .content {
@@ -320,18 +245,16 @@
 		
        /* Hero Section */
         .hero {
-            padding: 4rem 2rem 4rem;
+            <!-- padding: 4rem 2rem 4rem; -->
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-						<!-- height: 65vh; -->
-						height: auto;
+            min-height: 70vh;
 						width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-						overflow: hidden;
         }
 
         .hero-container {
@@ -359,22 +282,13 @@
         }
 
         .hero-content {
-            position: relative;
-    		display: flex;
-    		flex-direction: column;
-    		justify-content: center;
-    		padding: 48px;
-    		/*box-shadow: 0px 0px 2px black;*/
             text-align: left;
-			/*background: rgba(0,0,0,.6);*/
-			border-radius: 8px;
-			/*backdrop-filter: blur(4px);*/
         }
 
         .hero h1 {
             margin-bottom: 1.5rem;
-						padding: 0;
             background-clip: text;
+            text-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
             filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
         }
 
@@ -382,6 +296,7 @@
             font-size: 1.25rem;
             color: var(--text-predark);
             margin-bottom: 2.5rem;
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
             font-weight: 500;
             line-height: 1.6;
         }
@@ -419,7 +334,7 @@
 		  transform: translate(-50%, -50%);
 		  color: #fff;
 		  text-align: center;
-		  background: rgba(0, 0, 0, 0.4); /* Kontrast für Lesbarkeit */
+		  background: rgba(0, 0, 0, 0.4); /* Kontrast fr Lesbarkeit */
 		  padding: 20px 40px;
 		}
 		.hero-header h1 {
@@ -468,7 +383,7 @@
 			position: absolute;
 			right: 0;
 			top: 150px;
-		  overflow: hidden; /* wichtig für den Mask-Effekt */
+		  overflow: hidden; /* wichtig fr den Mask-Effekt */
 		}
 
 		.split-hero__image img {
@@ -476,7 +391,7 @@
 		  height: 100%;
 		  object-fit: cover;
 
-		  /* Hier passiert der weiche Übergang: */
+		  /* Hier passiert der weiche bergang: */
 			-webkit-mask-repeat: no-repeat;
 			-webkit-mask-composite: source-in;
 			-webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 40%), linear-gradient(to right, transparent 5%, black 30%), linear-gradient(to top, transparent 0%, black 20%);
@@ -484,68 +399,6 @@
 		}
 
 		/* Responsives Verhalten */
-
-        @media (min-width: 451px) { 
-            
-    	    .headerfeature-small {
-			    display: none;
-			}
-        }
-
-        @media (max-width: 450px) {
-            
-            .animate-fade-in {
-                height: 100%;
-            }
-            
-            .hero {
-                height: calc(100vh - 135px) !important;
-            }
-            
-            .hero-content {
-                padding: 24px;
-                height: 100%;
-            }
-            
-            .tricoma_energy_header {
-                display: none;
-            }
-            
-            .splide {
-                font-size: 28px !important;
-                height: 3.5em !important;
-            }
-            
-			.splide__slide {
-			    font-size: 28px !important;
-			}
-			
-			.headerfeature-normal {
-			    display: none;
-			}
-			
-			.headerfeature-small {
-			    display: block;
-			}
-        }
-
-		@media (max-width: 540px) {
-				.splide {
-						height: 3.5em !important;
-				}
-				
-				.splide__slide {
-						display: flex;
-						flex-direction: column;
-						justify-content: center;
-						height: 3.5em !important;
-						text-align: center;
-						align-items: center;
-						font-size: 32px;
-						letter-spacing: -1px;
-				}
-		}
-
 		@media (max-width: 900px) {
 		
 			.headerfeature-row {
@@ -573,7 +426,7 @@
 			}
 		
 			.headervideo {
-				<!-- width: unset !important; -->
+				width: unset !important;
 			}
 		
 		  .split-hero {
@@ -609,8 +462,6 @@
 		
         .section-header h2 {
             margin-bottom: 1rem;
-            font-size: 28px;
-            font-weight: 700;
         }
 
         .section-header p {
@@ -764,7 +615,6 @@
             transition: var(--transition);
             position: relative;
             border-top: 4px solid var(--accent-blue);
-            height: 100%;
         }
 
         .pricing-card.featured {
@@ -973,31 +823,6 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-				
-			.hero-container {
-				grid-template-columns: 1fr; /* Statt 1fr 1fr */
-				gap: 2rem;
-				text-align: center;
-			}
-
-			.hero-content {
-				text-align: center; /* Text in die Mitte, wirkt auf kleineren Screens besser */
-			}
-			
-			.nav-menu.active {
-				display: flex;
-				flex-direction: column;
-				position: absolute;
-				top: 135px; /* Höhe der Header-Navigation */
-				right: 0;
-				width: 100%;
-				background: rgba(255, 255, 255, 0.98);
-				gap: 1.5rem;
-				padding: 2rem;
-				box-shadow: var(--shadow);
-				z-index: 999;
-			}
-				
             .nav-menu {
                 display: none;
             }
@@ -1007,24 +832,11 @@
             }
 
             .hero {
-								padding: 0;
-								height: auto;
+                padding: 6rem 1rem 3rem;
             }
-						
-						.hero-content {
-								border-radius: 0;
-            }
-
-						.hero .animate-fade-in {
-								width: 100%;
-						}
 
             .section {
                 padding: 3rem 1rem;
-            }
-
-            .tplus_container .section {
-                padding: 3rem 2rem;
             }
 
             .card-grid {
@@ -1039,62 +851,6 @@
                 flex-direction: column;
                 align-items: center;
             }
-						
-						.hero-buttons .cta-button, .hero-buttons .cta-button-orange {
-								width: 40%;
-								min-width: 250px;
-						}
-        }
-
-        @media (max-width: 992px) {
-            
-            .cookiebanner {
-                height: 650px !important;
-            }
-            
-            .cookiebanner_actions {
-                flex-direction: column-reverse;
-                align-items: center !important;
-            }
-            
-            .cookiebanner_actions .button {
-                width: 30%;
-                margin: 0 !important;
-            }
-        }
-
-        @media (max-width: 1061px) {
-            .hero-container {
-				grid-template-columns: 1fr; /* Statt 1fr 1fr */
-				gap: 2rem;
-				text-align: center;
-			}
-
-			.hero-content {
-				text-align: center; /* Text in die Mitte, wirkt auf kleineren Screens besser */
-			}
-			
-			.nav-menu.active {
-				display: flex;
-				flex-direction: column;
-				position: absolute;
-				top: 135px; /* Höhe der Header-Navigation */
-				right: 0;
-				width: 100%;
-				background: rgba(255, 255, 255, 0.98);
-				gap: 1.5rem;
-				padding: 2rem;
-				box-shadow: var(--shadow);
-				z-index: 999;
-			}
-				
-            .nav-menu {
-                display: none;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
         }
 
         /* Smooth Scrolling */
@@ -1102,7 +858,7 @@
             scroll-behavior: smooth;
         }
 		
-		/* Globale Styles für alle Textfelder, Selects und Textareas */
+		/* Globale Styles fr alle Textfelder, Selects und Textareas */
 		input[type="text"],
 		input[type="email"],
 		input[type="number"],
@@ -1137,75 +893,26 @@
 		  outline: none;
 		}
 
-        input[type="checkbox"] {
-      appearance: none;
-      -webkit-appearance: none;
-      width: 38px;
-      height: 38px;
-      border: 2px solid #0077ff;
-      border-radius: 8px;
-      cursor: pointer;
-      position: relative;
-      background: #fff;
-      transition: background 0.25s ease, border-color 0.25s ease;
-      overflow: hidden;
-    }
-    
-    /* The SVG-like tick via clip-path */
-    input[type="checkbox"]::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: white;
-    
-      /* Draw a tick shape with clip-path polygon */
-      clip-path: polygon(30% 50%, 45% 65%, 75% 35%, 85% 45%, 45% 85%, 20% 60%);
-      
-      /* Initially hidden */
-      transform: scale(0);
-      transition: transform 0.25s ease;
-    }
-    
-    /* Checked state */
-    input[type="checkbox"]:checked {
-      background: #0077ff;
-      border-color: #0077ff;
-    }
-    
-    input[type="checkbox"]:checked::after {
-      transform: scale(1) translate(0, -2px);
-    } 
-    
-    /* Hover effect */
-    input[type="checkbox"]:hover {
-      box-shadow: 0 0 0 3px rgba(0, 119, 255, 0.2);
-    }
-
-
-        select {
-            padding: 0 16px;
-        }
-
-		/* Einheitliches Styling für Labels */
+		/* Einheitliches Styling fr Labels */
 		label {
-		    display: block;
-		    margin-bottom: 6px;
-		    font-weight: 500;
+		  display: block;
+		  margin-bottom: 6px;
+		  font-weight: 500;
 		}
 
-		/* Globale Styles für Buttons */
+		/* Globale Styles fr Buttons */
 		button,
 		input[type="submit"] {
-		    display: inline-block;
-		    padding: 12px 24px;
-		    font-size: 16px;
-		    font-weight: 600;
-		    color: #fff;
-		    background-color: #0077ff;
-		    border: none;
-		    border-radius: 8px;
-		    cursor: pointer;
-		    transition: background-color 0.3s, transform 0.1s;
+		  display: inline-block;
+		  padding: 12px 24px;
+		  font-size: 16px;
+		  font-weight: 600;
+		  color: #fff;
+		  background-color: #0077ff;
+		  border: none;
+		  border-radius: 8px;
+		  cursor: pointer;
+		  transition: background-color 0.3s, transform 0.1s;
 		}
 
 		button:hover,
@@ -1215,14 +922,14 @@
 
 		button:active,
 		input[type="submit"]:active {
-		    transform: scale(0.98);
+		  transform: scale(0.98);
 		}
 
 		/* Optional: Deaktivierte Buttons */
 		button:disabled,
 		input[type="submit"]:disabled {
-		    background-color: #cccccc;
-		    cursor: not-allowed;
+		  background-color: #cccccc;
+		  cursor: not-allowed;
 		}
 		
         /* Loading Animation */
@@ -1240,25 +947,44 @@
         .animate-fade-in {
             animation: fadeInUp 0.6s ease-out;
         }
+		
+		@media (max-width: 768px) {
+			.hero-container {
+				grid-template-columns: 1fr; /* Statt 1fr 1fr */
+				gap: 2rem;
+				text-align: center;
+			}
 
+			.hero-content {
+				text-align: center; /* Text in die Mitte, wirkt auf kleineren Screens besser */
+			}
+		}
+		
+		@media (max-width: 768px) {
+			.nav-menu.active {
+				display: flex;
+				flex-direction: column;
+				position: absolute;
+				top: 110px; /* Hhe der Header-Navigation */
+				right: 0;
+				width: 100%;
+				background: rgba(255, 255, 255, 0.95);
+				gap: 1.5rem;
+				padding: 2rem;
+				box-shadow: var(--shadow);
+				z-index: 999;
+			}
+		}
+		
 		/* tplus */
 		
 		.tplus_bildtext .tplus_column {
 			position: relative;
 		}
 
-        .tplus_container {
-            width: 100%;
-        }
-        
-        .tplus_container .section {
-            padding: 3rem 1.5rem;
-        }
+		.tplus_container {
 
-		.section .tplus_container {
 			width: 100%;
-			max-width: 1500px !important;
-			margin: 0 auto;
 		}
 		
 		.tplus_bildtext {
@@ -1268,36 +994,8 @@
 			align-content: center;
 			justify-content: center;
 			align-items: center;
-			gap: 48px;
 		}
 
-        .tplus_bildtext h2 {
-            font-size: 28px;
-        }
-
-        .tplus_image.detailbild {
-            text-align: center;
-        }
-        
-        .tplus_container div.section {
-            padding-bottom: 0;
-            padding-top: 0;
-        }
-        
-        .tplus_bildtext {
-            /*max-width: 85%;*/
-            /*margin-left: auto;*/
-            /*margin-right: auto;*/
-        }
-        
-        .tplus_bildtext_ueberschrift h2 {
-            font-size: 28px;
-            font-weight: 700;
-        }
-        
-        .tplus_bildtext img:not(.big_img.h_500) {
-            object-fit: cover;
-        }
 
 		/* Tabellen */
 
@@ -1367,7 +1065,7 @@
 		
 		.mask_check {
 			-webkit-mask-image: url(/templates/tricoma_energy/Labels/feather_black/check.svg);
-			background-image: linear-gradient(147deg, var(--accent-blue) 10%, var(--primary-blue) 25%, var(--primary-blue) 85%);
+			background-image: linear-gradient(147deg, #5c9c11 10%, #6bb614 25%, #508512 85%);
 		}
 
 		.mask_close {
@@ -1565,9 +1263,7 @@
 			}
 			.standards h2 {
 			  text-align: center;
-			  /*font-size: 2.5rem;*/
-			  font-size: 28px;
-			  font-weight: 700;
+			  font-size: 2.5rem;
 			  margin-bottom: 2rem;
 			}
 			.standards .container {
@@ -1980,23 +1676,13 @@
 				transition: background 0.3s ease;
 			}
 
-            .btn:hover {
-                color: white;
-            }
-
 			.btn:hover:not(.btn-disabled) {
-			  color: white;
 			  background: linear-gradient(1deg, var(--primary-blue), #0099ff);
 			}
 
 			.btn-disabled {
 			  background: #ccc;
-			  cursor: not-allowed !important;
-			}
-			
-			.btn-disabled:hover {
-			    color: white;
-			    background: #ccc;
+			  cursor: not-allowed;
 			}
 
 			.progress {
@@ -2014,146 +1700,6 @@
 			  width: 0;
 			  transition: width 0.3s ease;
 			}
-		
-		  .monatschart_container {
-			max-width: 900px;
-
-			padding: 5px;
-		  }
-
-		  .monatschart {
-			display: flex;
-			flex-direction: column;
-			gap: 16px;
-			padding: 4px;
-			background: #fff;
-		  }
-
-		  .monatschart_row {
-			display: flex;
-			align-items: center;
-			gap: 8px;
-			height: 20px;
-		  }
-
-		  .monatschart_label {
-			width: 120px;
-			font-size: 13px;
-			color: #2c3e50;
-		  }
-
-		  .monatschart_bar {
-			height: 100%;
-			border-radius: 8px;
-			align-items: center;
-			text-align: center;
-			valign: middle;
-			color: #fff;
-			height: 25px;
-			font-size: 11px;
-			font-weight: 300;
-			white-space: nowrap;
-		  }
-		
-		  .bar_solar { background: var(--chart-solar); width: 60%; }
-		  .bar_netz { background: var(--chart-netzbezug); width: 40%; }
-		  .bar_einspeisung { background: var(--chart-einspeisung); width: 20%; }
-		  .bar_heizung { background: var(--chart-heizung); width: 25%; }
-		  .bar_klima { background: var(--chart-klima); width: 15%; }
-		  .bar_wallbox { background: var(--chart-wallbox); width: 20%; }
-		  .bar_grundlast { background: var(--chart-grundlast); width: 20%; }
-			
-		  .monatschart_bars {
-			display: flex;
-		  }
-		
-			@media screen and (max-width: 989px) {
-
-            	.heribert_hilfe img {
-            		height: auto !important;
-            		max-height: 200px;
-            	}
-            	
-            	ul.rechts.tutorials, ul.rechts.filter {
-            		display: grid;
-            		justify-content: start;
-            		margin-top: 40px;
-            	}
-            	
-            	ul.rechts.tutorials li, ul.rechts.filter li {
-            		line-height: 30px;
-            	}
-            	
-            	ul.rechts.tutorials li .arrow span, ul.rechts.filter li .arrow span {
-            		top: 5px;
-            	}
-            	
-            	.tutorialeintrag .card {
-            		display: grid;
-            	}
-            	
-            	.tutorialeintrag div.bild {
-            		width: calc(100% - 40px);
-            		padding-top: 20px;
-            		padding-bottom: 0;
-            		padding-right: 20px;
-            	}
-            	
-            	.tutorialeintrag div.text {
-            		width: 100%;
-            	}
-            	
-            	.tplus_bildtext {
-            		display: flex;
-            		flex-direction: row;
-            		flex-wrap: wrap;
-            		justify-content: flex-start;
-            		align-content: center;
-            		align-items: center;
-            	}
-            	.tplus_column.columns {
-            		padding-left: 0 !important;
-            		padding-right: 0 !important;
-            		    padding-top: 20px;
-            	}
-            
-            	.tplus_bildtext.text-left > .tplus_column:not(.line0):first-child {
-            		order:2;
-            		margin-top: 30px;
-            	}
-            
-            	.tplus_bildtext.text-left > .tplus_column:not(.line0):nth-child(2) {
-            		order:1;
-            	}
-            
-            	.tplus_bildtext.text-left > .tplus_column.line0 {
-            		order:1;
-            	}
-            
-            	.tplus_bildtext.text-left > .tplus_column.line0 ~ .tplus_column {
-            		order:2;
-            		margin-top: 30px;
-            	}
-            
-            	h2.faq_ueberschrift {
-            		font-size: 30px !important;
-            	}
-            
-            	ul.faq > li > a {
-            		font-size: 18px !important;
-            
-            	}
-            
-            	ul.faq .faqcontent {
-            		font-size: 14px !important;
-            		line-height: 20px !important;
-            
-            	}
-            
-            	.tplus_element.tplus_elemente_abstand {
-            		max-height: 80px;
-            	}
-            }
 
 		/* Schriftart Open Sans */
 
@@ -2300,545 +1846,551 @@
 		
 		
     </style>
-<link type="text/css" rel="stylesheet" href="/templates/tricoma_energy/css/tmpl_tricomaenergyweb_.css">
- </head>
-		
-
-		
+</head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" style="background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(20px) saturate(180%); border-bottom: 1px solid rgba(255, 255, 255, 0.2); box-shadow: rgba(0, 0, 0, 0.05) 0px 8px 32px;">
         <nav class="nav-container">
-            <div style="display: flex; align-items: center; flex-shrink: 1; width: 250px;">
-				<a href="/">
-               		<img src="/templates/tricoma_energy/Labels/logo.svg" height=120>
+            <div style="display: flex; align-items: center;">
+				<a href="https://www.tricoma.energy/">
+               		<img src="logo.svg" height="80">
 				</a>
             </div>
             <ul class="nav-menu">
-				<li><a href="/Startseite/" class="nav-link">Startseite</a></li><li><a href="/Leistungen/" class="nav-link">Leistungen</a></li><li><a href="/Anwendungsfaelle/" class="nav-link">Anwendungsfälle</a></li><li><a href="/Preise/" class="nav-link">Preise</a></li><li><a href="/Case-Study/" class="nav-link">Case Study</a></li><li><a href="/Kontakt_1/" class="nav-link">Kontakt</a></li><li><a href="/Jetzt-starten/" class="cta-button-orange">Jetzt starten</a></li>
+				<li><a href="https://www.tricoma.energy/Startseite/" class="nav-link">Startseite</a></li><li><a href="https://www.tricoma.energy/Leistungen/" class="nav-link">Leistungen</a></li><li><a href="https://www.tricoma.energy/Anwendungsfaelle/" class="nav-link">Anwendungsflle</a></li><li><a href="https://www.tricoma.energy/Preise/" class="nav-link">Preise</a></li><li><a href="https://www.tricoma.energy/Case-Study/" class="nav-link">Case Study</a></li><li><a href="https://www.tricoma.energy/Kontakt_1/" class="nav-link">Kontakt</a></li><li><a href="https://www.tricoma.energy/Jetzt-starten/" class="cta-button">Jetzt starten</a></li>
             </ul>
-            <button class="mobile-menu-btn" style="margin-bottom: 0;">&#9776;</button>
+            <button class="mobile-menu-btn">&#9776;</button>
         </nav>
     </header>	
 	
-		<p style="margin: 0;">
-
-
-<div id="tricoma_energy_slider" class="carousel slide position-relative" data-bs-ride="carousel" data-bs-interval="5000" style="height: 500px;">
-
-  <!-- Stationary floating text box -->
-  <div id="tricoma_energy_case_header_floating" class="position-absolute w-100 p-0" 
-       style=" max-width: 768px;  z-index: 10; left: 0px; bottom: 2.5rem;">
-    <div class="card p-0 m-0" style="background-color: white; filter: opacity(0.85); border-top: 5px solid #0099ff; border-radius: 0px; padding: 1.25rem 1rem;">
-        <div class="card-body">
-            <div class="card-title border-0">
-              <h1 style="font-size: 26px !important;">Unsere Anwendungsf&#228;lle</h1>
-            </div>
-            <div class="card-text d-none d-sm-block">
-        		<p>
-        			<strong>Entdecke die vielf&#228;ltigen M&#246;glichkeiten f&#252;r dein Unternehmen!</strong><br>
-        		</p>
-        			<br>
-        		<p>
-Mit tricoma.energy überwachst du deinen Energieverbrauch in Echtzeit, steuerst Lasten intelligent, integrierst erneuerbare Energiequellen, reduzierst CO&#8322;-Emissionen und erfüllst ESG-Vorgaben. Automatisiertes Reporting optimiert Kosten und Netzbelastung.        		</p>
+		<p>    <!-- Hero Section -->
+    </p>
+		<div class="hero">
+				<video autoplay="" loop="" muted="" playsinline="" style="width: 100%; height: 100%; position: absolute;" class="headervideo">
+				  <source src="test_files/Headervideo_Test_Midjurney_20prozent.mp4" type="video/webm">
+				  Dein Browser untersttzt kein HTML5-Video.
+				</video>
+        <div class="animate-fade-in" style="z-index: 2;">
+				<!--<img src="/templates/tricoma_energy/Labels/hero2.png" width="100%">-->
+            <div class="hero-content" style="color: #f9fafb;">
+								<h1 style="color: #f9fafb; text-align: center; text-shadow: 2px 2px 3px #000000;">
+									<div><span style="text-shadow: 2px 2px 3px #000000;">tricoma</span>.<span class="text-color-gradient-orange" style="text-shadow: none;">energy</span></div>
+									<div id="word-slider" class="splide" style="width: 100%; height: 1.6em; overflow:hidden;">
+									<div class="splide__track">
+										<ul class="splide__list">
+											<li class="splide__slide">Smarte Energiesteuerung</li>
+											<li class="splide__slide">Smart Charging System</li>
+											<li class="splide__slide">PV- und Speichercheck</li>
+											<li class="splide__slide">Dynamisches Lastprofil</li>
+											<li class="splide__slide">CO2-Footprint senken</li>
+											<li class="splide__slide">Smart Building Control</li>
+											<li class="splide__slide">Echtzeit Datenanalyse</li>
+											<li class="splide__slide">Batteriekontroll Management </li>
+											<li class="splide__slide">AI Energy Solution dank tricoma.<strong>AI</strong></li>
+										</ul>
+									</div>
+								</div>
+								</h1>
+                <div style="text-align: center; text-shadow: 2px 2px 3px #000000;">Eine Plattform fr deine Energielsung.<br><strong>Energiemanagementsoftware in der Cloud</strong><br><br></div>
+								<div style="display: flex; flex-direction: row; justify-content: space-between; gap: 16px;" class="headerfeatures">
+									<div class="headerfeature-row">
+										<div class="headerfeature">Wallboxanbindung und -abrechnung</div>
+										<div class="headerfeature">Photovoltaik- und Batteriespeichermonitoring</div>
+									</div>
+									<div class="headerfeature-row">
+										<div class="headerfeature">Ansteuerung von Klima- und Heiztechnik</div>
+										<div class="headerfeature">smarte Gebudesteuerung</div>
+									</div>
+								</div>
+                <div class="hero-buttons" style="margin-top: 32px;">
+                    <a href="https://www.tricoma.energy/Preise/" class="cta-button">Pakete vergleichen</a>
+                    <a href="https://www.tricoma.energy/Jetzt-starten/" class="cta-button-orange">Jetzt starten</a>
+                </div>
             </div>
         </div>
-    </div>
-  </div>
-
-  <div class="carousel-inner h-100">
-    <!-- Slide 1 -->
-    <div class="carousel-item active h-100">
-      <img src="/templates/tricoma_energy/Labels/case_slider_1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Image 1">
-    </div>
-
-    <!-- Slide 2 -->
-    <div class="carousel-item h-100">
-      <img src="/templates/tricoma_energy/Labels/case_slider_2.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Image 2">
+    </div>  
+</div>  
+<section id="funktionsweise" class="standards" style="background: var(--white); padding: 5rem 0;">
+  <div class="container">
+    <div class="section-header">
+      <h2>Ein zentrales System fr deine Energiesteuerung</h2>
+      <p>tricoma.energy verbindet deine verschiedenen Systeme fr eine globale Steuerung</p>
     </div>
 
-    <!-- Slide 3 -->
-    <div class="carousel-item h-100">
-      <img src="/templates/tricoma_energy/Labels/case_slider_3.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Image 3">
+    <div class="row">
+      <div class="result-box" style="min-height: 420px;"> <!-- Kastenhhe anpassbar -->
+        <div>
+          <!-- Gre steuerst du ber die .video-size-Klasse -->
+          <video id="energyVid"
+                 class="video-size"
+                 muted
+                 playsinline
+                 autoplay
+                 loop
+                 preload="auto"
+                 style="display:block; margin:0 auto;">
+            <source src="tricoma_energy_NEU.webm" type="video/webm">
+            Dein Browser untersttzt kein WebM-Video.
+          </video>
+        </div>
+      </div>
     </div>
+<style>
+  /* >>> Gre hier anpassen <<< */
+  /* Variante A: feste Breite, Hhe automatisch */
+  .video-size { width: 560px; height: auto; }
 
-    <!-- Slide 4 -->
-    <div class="carousel-item h-100">
-      <img src="/templates/tricoma_energy/Labels/case_slider_4.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Image 4">
-    </div>
-    
-    <div class="carousel-item h-100">
-      <img src="/templates/tricoma_energy/Labels/case_slider_5.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Image 4">
-    </div>
-    
-    <div class="carousel-item h-100">
-      <img src="/templates/tricoma_energy/Labels/case_slider_6.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Image 4">
-    </div>
-  </div>
+  /* Variante B (optional): responsive volle Breite mit Seitenverhltnis
+     => dafr A auskommentieren und diese beiden aktivieren
+  .video-size { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+  .result-box   { min-height: 0; }  /* Kasten wchst dann mit */
+</style>
+      <div class="row">
 
-  <!-- Indicators -->
-  <div class="carousel-indicators">
-    <button type="button" style="border: 0; border-radius: 50%; background: #ff9900; height: 8px; width: 8px;" 
-            data-bs-target="#tricoma_energy_slider" data-bs-slide-to="0" class="active my-0 mx-1"></button>
-    <button type="button" style="border: 0; border-radius: 50%; background: #ff9900; height: 8px; width: 8px;" 
-            data-bs-target="#tricoma_energy_slider" data-bs-slide-to="1" class="my-0 mx-1"></button>
-    <button type="button" style="border: 0; border-radius: 50%; background: #ff9900; height: 8px; width: 8px;" 
-            data-bs-target="#tricoma_energy_slider" data-bs-slide-to="2" class="my-0 mx-1"></button>
-    <button type="button" style="border: 0; border-radius: 50%; background: #ff9900; height: 8px; width: 8px;" 
-            data-bs-target="#tricoma_energy_slider" data-bs-slide-to="3" class="my-0 mx-1"></button>
-    <button type="button" style="border: 0; border-radius: 50%; background: #ff9900; height: 8px; width: 8px;" 
-            data-bs-target="#tricoma_energy_slider" data-bs-slide-to="4" class="my-0 mx-1"></button>
-    <button type="button" style="border: 0; border-radius: 50%; background: #ff9900; height: 8px; width: 8px;" 
-            data-bs-target="#tricoma_energy_slider" data-bs-slide-to="5" class="my-0 mx-1"></button>
-  </div>
-</div>
-<div id="branche_gewerbe"></div>
-<div class="section ptop_40 pbottom_40 bg_light_gradient">
-	<div class="container cwidth_900">
-		<h2 class="text-center" >Gewerbe / Industrie</h2>
-	</div>
-</div>
+        <div class="box">
+			<div>
+				<img src="Photovoltaik.svg" alt="Wallbox" height="64">
+			</div>
+          <h3>Wechselrichter / Batteriespeicher</h3>
+          <p>Ertragswerte, Batteriespeicherstand und Regeln fr dein Energiemanagement.</p>
+        </div>
 
-<div class="container" style="
-    margin-top: 32px;
-    margin-bottom: 32px;
-">
-	<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 align-items-stretch">
-		<div class="col">
-  <div class="card h-100 p-0 border-0" style="cursor: pointer;">
-    <!-- Image -->
-    <div 
-      class="card-img-top bg-cover" 
-      style="background-image: url('/modul.php?modul=tricomaenergyweb&modulkat=element&ID=218&element=0&vorschau=1'); height: 200px; cursor: pointer;" 
-      onclick="document.location.href='/Branchen/BueroparksBusiness-Center/'">
+        <div class="box">
+			<div>
+				<img src="Wallbox.svg" alt="Wallbox" height="64">
+			</div>
+          <h3>Wallbox</h3>
+          <p>Lastmanagement, Anmeldung, Abrechnung, Zeitsteuerung und vieles mehr.</p>
+        </div>
+
+        <div class="box">
+			<div>
+				<img src="Klimatisierung.svg" alt="Wallbox" height="64">
+			</div>
+          <h3>Klima / Heizung</h3>
+          <p>Automatische Steuerung der Heizung, Heizungsregler oder Klimaanlagen.</p>
+        </div>
+
+        <div class="box">
+			<div>
+				<img src="Software_Nutzung.png" alt="Wallbox" height="64">
+			</div>
+          <h3>Home Assistant</h3>
+          <p>Im eigenen Gebude<br><em>Quelloffen, erweiterbar, unabhngig</em></p>
+        </div>
+		  
+        <div class="box">
+			<div>
+				<img src="Gbaudesteuerung_SmartHome.svg" alt="Wallbox" height="64">
+			</div>
+          <h3>Sonstige Hardware</h3>
+          <p>Anbindung von bekannten Systemen wie Philips Hue, Homematic und tausenden weiteren</p>
+        </div>
+		  
+      </div>
     </div>
-
-    <!-- Body -->
-    <div class="card-body d-flex flex-column target-group-content">
-      <h5 class="card-title" style="font-size: 20px; color: #343434; font-weight: 600;">Büroparks & Business Center</h5>
-      <p class="card-text" style="margin-bottom: 0;">Optimiere die Betriebskosten in deinen Unternehmensgebäuden.</p>
-      <div class="liste"><ul class="functions_list w100"><li>
-								Mitarbeiter-Ladesäulen mit fairer Abrechnung
-								</li><li>
-								Flottenmanagement für Firmenfahrzeuge
-								</li><li>
+  </section>
+<!-- Zielgruppen -->
+<section id="zielgruppen" class="section">
+	<div class="container">
+        <div class="section-header">
+            <h2>Unsere Zielgruppen</h2>
+            <p>Mageschneiderte Lsungen fr verschiedene Anwendungsbereiche</p>
+        </div>
+        <div class="card-grid">
+			<div class="target-group-card animate-fade-in" style="cursor: pointer;" onclick="document.location.href=&#39;/Branchen/BueroparksBusiness-Center/&#39;;">
+							<div class="target-group-image target-group-5" style="background-image: url(https://www.tricoma.energy/modul.php?modul=tricomaenergyweb&modulkat=element&ID=218&element=0&vorschau=1;);">
+								<span></span>
+							</div>
+							<div class="target-group-content">
+								<h3>Broparks &amp; Business Center</h3>
+								<p>Optimiere die Betriebskosten in deinen Unternehmensgebuden.</p>
+								<div class="liste"><ul class="functions_list w100"><li><span class="img bg_green_gradient mask_check"></span>
+								Mitarbeiter-Ladesulen mit fairer Abrechnung
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Flottenmanagement fr Firmenfahrzeuge
+								</li><li><span class="img bg_green_gradient mask_check"></span>
 								Integration in bestehende IT-Systeme
-								</li><li>
+								</li><li><span class="img bg_green_gradient mask_check"></span>
 								Compliance und Dokumentation
-								</li><li>
-								Skalierbare Lösungen
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Skalierbare Lsungen
 								</li></ul></div>
-      
-      <!-- Button aligned bottom -->
-      <div class="mt-auto">
-        <a href="/Branchen/BueroparksBusiness-Center/" class="btn btn-primary">Mehr erfahren</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-	</div>
-</div>
-<div id="branche_wohnung"></div>
-<div class="section ptop_40 pbottom_40 bg_light_gradient">
-	<div class="container cwidth_900">
-		<h2 class="text-center" >Wohnungswirtschaft / Immobilienverwaltungen</h2>
-	</div>
-</div>
-
-<div class="container" style="
-    margin-top: 32px;
-    margin-bottom: 32px;
-">
-	<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 align-items-stretch">
-		<div class="col">
-  <div class="card h-100 p-0 border-0" style="cursor: pointer;">
-    <!-- Image -->
-    <div 
-      class="card-img-top bg-cover" 
-      style="background-image: url('/modul.php?modul=tricomaenergyweb&modulkat=element&ID=1&element=0&vorschau=1'); height: 200px; cursor: pointer;" 
-      onclick="document.location.href='/Branchen/Hausverwaltungen/'">
-    </div>
-
-    <!-- Body -->
-    <div class="card-body d-flex flex-column target-group-content">
-      <h5 class="card-title" style="font-size: 20px; color: #343434; font-weight: 600;">Hausverwaltungen</h5>
-      <p class="card-text" style="margin-bottom: 0;"></p>
-      <div class="liste"><ul class="functions_list w100"><li>
-								Mieter-Ladestationen mit individueller Abrechnung
-								</li><li>
-								Steigerung der Immobilienwerte
-								</li><li>
-								Wartungsfreie Plug-and-Play Lösungen
-								</li><li>
-								Rechtssichere Abrechnungsmodelle
-								</li><li>
-								Attraktivität für umweltbewusste Mieter
-								</li></ul></div>
-      
-      <!-- Button aligned bottom -->
-      <div class="mt-auto">
-        <a href="/Branchen/Hausverwaltungen/" class="btn btn-primary">Mehr erfahren</a>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="col">
-  <div class="card h-100 p-0 border-0" style="cursor: pointer;">
-    <!-- Image -->
-    <div 
-      class="card-img-top bg-cover" 
-      style="background-image: url('/modul.php?modul=tricomaenergyweb&modulkat=element&ID=213&element=0&vorschau=1'); height: 200px; cursor: pointer;" 
-      onclick="document.location.href='/Branchen/BautraegerProjektentwickler/'">
-    </div>
-
-    <!-- Body -->
-    <div class="card-body d-flex flex-column target-group-content">
-      <h5 class="card-title" style="font-size: 20px; color: #343434; font-weight: 600;">Bauträger & Projektentwickler</h5>
-      <p class="card-text" style="margin-bottom: 0;"></p>
-      
-      
-      <!-- Button aligned bottom -->
-      <div class="mt-auto">
-        <a href="/Branchen/BautraegerProjektentwickler/" class="btn btn-primary">Mehr erfahren</a>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="col">
-  <div class="card h-100 p-0 border-0" style="cursor: pointer;">
-    <!-- Image -->
-    <div 
-      class="card-img-top bg-cover" 
-      style="background-image: url('/modul.php?modul=tricomaenergyweb&modulkat=element&ID=214&element=0&vorschau=1'); height: 200px; cursor: pointer;" 
-      onclick="document.location.href='/Branchen/Serviced-Apartments/'">
-    </div>
-
-    <!-- Body -->
-    <div class="card-body d-flex flex-column target-group-content">
-      <h5 class="card-title" style="font-size: 20px; color: #343434; font-weight: 600;">Serviced Apartments</h5>
-      <p class="card-text" style="margin-bottom: 0;"></p>
-      <div class="liste"><ul class="functions_list w100"><li>
-								test
-								</li><li>
-								test
-								</li><li>
-								test
-								</li></ul></div>
-      
-      <!-- Button aligned bottom -->
-      <div class="mt-auto">
-        <a href="/Branchen/Serviced-Apartments/" class="btn btn-primary">Mehr erfahren</a>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="col">
-  <div class="card h-100 p-0 border-0" style="cursor: pointer;">
-    <!-- Image -->
-    <div 
-      class="card-img-top bg-cover" 
-      style="background-image: url('/modul.php?modul=tricomaenergyweb&modulkat=element&ID=215&element=0&vorschau=1'); height: 200px; cursor: pointer;" 
-      onclick="document.location.href='/Branchen/ImmobilienfondsInvestoren/'">
-    </div>
-
-    <!-- Body -->
-    <div class="card-body d-flex flex-column target-group-content">
-      <h5 class="card-title" style="font-size: 20px; color: #343434; font-weight: 600;">Immobilienfonds & Investoren</h5>
-      <p class="card-text" style="margin-bottom: 0;"></p>
-      
-      
-      <!-- Button aligned bottom -->
-      <div class="mt-auto">
-        <a href="/Branchen/ImmobilienfondsInvestoren/" class="btn btn-primary">Mehr erfahren</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-	</div>
-</div>
-<div id="branche_hotellerie"></div>
-<div class="section ptop_40 pbottom_40 bg_light_gradient">
-	<div class="container cwidth_900">
-		<h2 class="text-center" >Hotellerie / Gastronomie</h2>
-	</div>
-</div>
-
-<div class="container" style="
-    margin-top: 32px;
-    margin-bottom: 32px;
-">
-	<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 align-items-stretch">
-		<div class="col">
-  <div class="card h-100 p-0 border-0" style="cursor: pointer;">
-    <!-- Image -->
-    <div 
-      class="card-img-top bg-cover" 
-      style="background-image: url('/modul.php?modul=tricomaenergyweb&modulkat=element&ID=219&element=0&vorschau=1'); height: 200px; cursor: pointer;" 
-      onclick="document.location.href='/Branchen/HotelsHotelketten/'">
-    </div>
-
-    <!-- Body -->
-    <div class="card-body d-flex flex-column target-group-content">
-      <h5 class="card-title" style="font-size: 20px; color: #343434; font-weight: 600;">Hotels & Hotelketten</h5>
-      <p class="card-text" style="margin-bottom: 0;"></p>
-      <div class="liste"><ul class="functions_list w100"><li>
-								Gäste-Ladestationen mit automatischer Abrechnung
-								</li><li>
+							</div>
+						</div><div class="target-group-card animate-fade-in" style="cursor: pointer;" onclick="document.location.href=&#39;/Branchen/HotelsHotelketten/&#39;;">
+							<div class="target-group-image target-group-5" style="background-image: url(https://www.tricoma.energy/modul.php?modul=tricomaenergyweb&modulkat=element&ID=219&element=0&vorschau=1;);">
+								<span></span>
+							</div>
+							<div class="target-group-content">
+								<h3>Hotels &amp; Hotelketten</h3>
+								<p></p>
+								<div class="liste"><ul class="functions_list w100"><li><span class="img bg_green_gradient mask_check"></span>
+								Gste-Ladestationen mit automatischer Abrechnung
+								</li><li><span class="img bg_green_gradient mask_check"></span>
 								Integration in Hotelmanagementsysteme
-								</li><li>
-								Zusatzerlöse durch Ladegebühren
-								</li><li>
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Zusatzerlse durch Ladegebhren
+								</li><li><span class="img bg_green_gradient mask_check"></span>
 								Nachhaltigkeitszertifizierung
-								</li><li>
-								Premium-Service für E-Auto-Fahrer
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Premium-Service fr E-Auto-Fahrer
 								</li></ul></div>
-      
-      <!-- Button aligned bottom -->
-      <div class="mt-auto">
-        <a href="/Branchen/HotelsHotelketten/" class="btn btn-primary">Mehr erfahren</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-	</div>
-</div>
-<div id="branche_kommune"></div>
-<div class="section ptop_40 pbottom_40 bg_light_gradient">
-	<div class="container cwidth_900">
-		<h2 class="text-center" >Kommunen / &#246;ffentliche Einrichtungen</h2>
-	</div>
-</div>
-
-<div class="container" style="
-    margin-top: 32px;
-    margin-bottom: 32px;
-">
-	<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 align-items-stretch">
-		<div class="col">
-  <div class="card h-100 p-0 border-0" style="cursor: pointer;">
-    <!-- Image -->
-    <div 
-      class="card-img-top bg-cover" 
-      style="background-image: url('/modul.php?modul=tricomaenergyweb&modulkat=element&ID=220&element=0&vorschau=1'); height: 200px; cursor: pointer;" 
-      onclick="document.location.href='/Branchen/KlinikenPflegeeinrichtungen/'">
-    </div>
-
-    <!-- Body -->
-    <div class="card-body d-flex flex-column target-group-content">
-      <h5 class="card-title" style="font-size: 20px; color: #343434; font-weight: 600;">Kliniken & Pflegeeinrichtungen</h5>
-      <p class="card-text" style="margin-bottom: 0;"></p>
-      
-      
-      <!-- Button aligned bottom -->
-      <div class="mt-auto">
-        <a href="/Branchen/KlinikenPflegeeinrichtungen/" class="btn btn-primary">Mehr erfahren</a>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="col">
-  <div class="card h-100 p-0 border-0" style="cursor: pointer;">
-    <!-- Image -->
-    <div 
-      class="card-img-top bg-cover" 
-      style="background-image: url('/modul.php?modul=tricomaenergyweb&modulkat=element&ID=224&element=0&vorschau=1'); height: 200px; cursor: pointer;" 
-      onclick="document.location.href='/Branchen/Oeffentliche-Einrichtungen/'">
-    </div>
-
-    <!-- Body -->
-    <div class="card-body d-flex flex-column target-group-content">
-      <h5 class="card-title" style="font-size: 20px; color: #343434; font-weight: 600;">Öffentliche Einrichtungen</h5>
-      <p class="card-text" style="margin-bottom: 0;"></p>
-      <div class="liste"><ul class="functions_list w100"><li>
-								Abrechnungssysteme für kommunale Ladevorgänge
-								</li><li>
-								Förderfähige Lösungen mit Nachweiskonformität
-								</li><li>
-								Integration in Gebäudemanagementsysteme
-								</li><li>
-								Nutzerverwaltung für Dienstfahrzeuge
-								</li><li>
-								Energie- & Umweltreporting
-								</li></ul></div>
-      
-      <!-- Button aligned bottom -->
-      <div class="mt-auto">
-        <a href="/Branchen/Oeffentliche-Einrichtungen/" class="btn btn-primary">Mehr erfahren</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-	</div>
-</div>
-<div id="branche_einzelhandel"></div>
-<div class="section ptop_40 pbottom_40 bg_light_gradient">
-	<div class="container cwidth_900">
-		<h2 class="text-center" >Einzelhandel / Handelsketten</h2>
-	</div>
-</div>
-
-<div class="container" style="
-    margin-top: 32px;
-    margin-bottom: 32px;
-">
-	<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 align-items-stretch">
-		<div class="col">
-  <div class="card h-100 p-0 border-0" style="cursor: pointer;">
-    <!-- Image -->
-    <div 
-      class="card-img-top bg-cover" 
-      style="background-image: url('/modul.php?modul=tricomaenergyweb&modulkat=element&ID=221&element=0&vorschau=1'); height: 200px; cursor: pointer;" 
-      onclick="document.location.href='/Branchen/Lebensmittelmaerkte/'">
-    </div>
-
-    <!-- Body -->
-    <div class="card-body d-flex flex-column target-group-content">
-      <h5 class="card-title" style="font-size: 20px; color: #343434; font-weight: 600;">Lebensmittelmärkte</h5>
-      <p class="card-text" style="margin-bottom: 0;"></p>
-      <div class="liste"><ul class="functions_list w100"><li>
+							</div>
+						</div><div class="target-group-card animate-fade-in" style="cursor: pointer;" onclick="document.location.href=&#39;/Branchen/Lebensmittelmaerkte/&#39;;">
+							<div class="target-group-image target-group-5" style="background-image: url(https://www.tricoma.energy/modul.php?modul=tricomaenergyweb&modulkat=element&ID=221&element=0&vorschau=1;);">
+								<span></span>
+							</div>
+							<div class="target-group-content">
+								<h3>Lebensmittelmrkte</h3>
+								<p></p>
+								<div class="liste"><ul class="functions_list w100"><li><span class="img bg_green_gradient mask_check"></span>
 								Flexible Tarifgestaltung (Stunden-/Tagespauschalen)
-								</li><li>
+								</li><li><span class="img bg_green_gradient mask_check"></span>
 								Integration in Parkraumbewirtschaftung
-								</li><li>
+								</li><li><span class="img bg_green_gradient mask_check"></span>
 								Kundenservice
-								</li><li>
+								</li><li><span class="img bg_green_gradient mask_check"></span>
 								Lastmanagement
 								</li></ul></div>
-      
-      <!-- Button aligned bottom -->
-      <div class="mt-auto">
-        <a href="/Branchen/Lebensmittelmaerkte/" class="btn btn-primary">Mehr erfahren</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-	</div>
-</div>
-<div id="branche_parkplaetze"></div>
-<div class="section ptop_40 pbottom_40 bg_light_gradient">
-	<div class="container cwidth_900">
-		<h2 class="text-center" >Parkplatz / Charging Hubs</h2>
-	</div>
-</div>
-
-<div class="container" style="
-    margin-top: 32px;
-    margin-bottom: 32px;
-">
-	<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 align-items-stretch">
-		<div class="col">
-  <div class="card h-100 p-0 border-0" style="cursor: pointer;">
-    <!-- Image -->
-    <div 
-      class="card-img-top bg-cover" 
-      style="background-image: url('/modul.php?modul=tricomaenergyweb&modulkat=element&ID=222&element=0&vorschau=1'); height: 200px; cursor: pointer;" 
-      onclick="document.location.href='/Branchen/Charging-Hubs/'">
-    </div>
-
-    <!-- Body -->
-    <div class="card-body d-flex flex-column target-group-content">
-      <h5 class="card-title" style="font-size: 20px; color: #343434; font-weight: 600;">Charging Hubs</h5>
-      <p class="card-text" style="margin-bottom: 0;"></p>
-      <div class="liste"><ul class="functions_list w100"><li>
+							</div>
+						</div><div class="target-group-card animate-fade-in" style="cursor: pointer;" onclick="document.location.href=&#39;/Branchen/Charging-Hubs/&#39;;">
+							<div class="target-group-image target-group-5" style="background-image: url(https://www.tricoma.energy/modul.php?modul=tricomaenergyweb&modulkat=element&ID=222&element=0&vorschau=1;);">
+								<span></span>
+							</div>
+							<div class="target-group-content">
+								<h3>Charging Hubs</h3>
+								<p></p>
+								<div class="liste"><ul class="functions_list w100"><li><span class="img bg_green_gradient mask_check"></span>
 								Betreiber-Abrechnungssystem
-								</li><li>
+								</li><li><span class="img bg_green_gradient mask_check"></span>
 								Dynamisches Lastmanagement
-								</li><li>
-								Roaming-Integration & Backend-Services
-								</li><li>
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Roaming-Integration &amp; Backend-Services
+								</li><li><span class="img bg_green_gradient mask_check"></span>
 								Predictive Maintenance
-								</li><li>
-								White-Label-Lösungen
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								White-Label-Lsungen
 								</li></ul></div>
-      
-      <!-- Button aligned bottom -->
-      <div class="mt-auto">
-        <a href="/Branchen/Charging-Hubs/" class="btn btn-primary">Mehr erfahren</a>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="col">
-  <div class="card h-100 p-0 border-0" style="cursor: pointer;">
-    <!-- Image -->
-    <div 
-      class="card-img-top bg-cover" 
-      style="background-image: url('/modul.php?modul=tricomaenergyweb&modulkat=element&ID=223&element=0&vorschau=1'); height: 200px; cursor: pointer;" 
-      onclick="document.location.href='/Branchen/ParkhaeuserTiefgaragen/'">
-    </div>
-
-    <!-- Body -->
-    <div class="card-body d-flex flex-column target-group-content">
-      <h5 class="card-title" style="font-size: 20px; color: #343434; font-weight: 600;">Parkhäuser & Tiefgaragen</h5>
-      <p class="card-text" style="margin-bottom: 0;"></p>
-      <div class="liste"><ul class="functions_list w100"><li>
-								Zoniertes Lastmanagement für optimale Auslastung
-								</li><li>
+							</div>
+						</div><div class="target-group-card animate-fade-in" style="cursor: pointer;" onclick="document.location.href=&#39;/Branchen/ParkhaeuserTiefgaragen/&#39;;">
+							<div class="target-group-image target-group-5" style="background-image: url(https://www.tricoma.energy/modul.php?modul=tricomaenergyweb&modulkat=element&ID=223&element=0&vorschau=1;);">
+								<span></span>
+							</div>
+							<div class="target-group-content">
+								<h3>Parkhuser &amp; Tiefgaragen</h3>
+								<p></p>
+								<div class="liste"><ul class="functions_list w100"><li><span class="img bg_green_gradient mask_check"></span>
+								Zoniertes Lastmanagement fr optimale Auslastung
+								</li><li><span class="img bg_green_gradient mask_check"></span>
 								Flexible Tarifgestaltung (Stunden-/Tagespauschalen)
-								</li><li>
+								</li><li><span class="img bg_green_gradient mask_check"></span>
 								Integration in Parkraumbewirtschaftung
-								</li><li>
-								Reservierungssystem für Ladeplätze
-								</li><li>
-								Revenue-Optimierung durch Premium-Stellplätze
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Reservierungssystem fr Ladepltze
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Revenue-Optimierung durch Premium-Stellpltze
 								</li></ul></div>
-      
-      <!-- Button aligned bottom -->
-      <div class="mt-auto">
-        <a href="/Branchen/ParkhaeuserTiefgaragen/" class="btn btn-primary">Mehr erfahren</a>
-      </div>
-    </div>
-  </div>
-</div>
-
+							</div>
+						</div><div class="target-group-card animate-fade-in" style="cursor: pointer;" onclick="document.location.href=&#39;/Branchen/Oeffentliche-Einrichtungen/&#39;;">
+							<div class="target-group-image target-group-5" style="background-image: url(https://www.tricoma.energy/modul.php?modul=tricomaenergyweb&modulkat=element&ID=224&element=0&vorschau=1;);">
+								<span></span>
+							</div>
+							<div class="target-group-content">
+								<h3>ffentliche Einrichtungen</h3>
+								<p></p>
+								<div class="liste"><ul class="functions_list w100"><li><span class="img bg_green_gradient mask_check"></span>
+								Abrechnungssysteme fr kommunale Ladevorgnge
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Frderfhige Lsungen mit Nachweiskonformitt
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Integration in Gebudemanagementsysteme
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Nutzerverwaltung fr Dienstfahrzeuge
+								</li><li><span class="img bg_green_gradient mask_check"></span>
+								Energie- &amp; Umweltreporting
+								</li></ul></div>
+							</div>
+						</div>        </div>
+		
+		<div class="more-features">
+			<h4>... viele weitere Mglichkeiten warten auf dich.</h4>
+		   <a href="https://www.tricoma.energy/Anwendungsfaelle/" class="cta-button" style="margin-top: 1.5rem; display: inline-block;">Alle Anwendungsflle kennenlernen</a>
+		</div>
+	</div>		
+</section>
+<!-- Pakete -->
+<section id="pakete" style="background: var(--white); padding: 5rem 0;">
+	<div class="container">
+        <div class="section">
+            <div class="section-header">
+                <h2>Unsere Pakete</h2>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-title">Wallbox</div>
+                    <div class="pricing-price">ab 0<span style="font-size: 1rem; font-weight: normal;"> / Monat</span></div>
+                    <p class="pricing-description">Ideal fr kleine Unternehmen oder Vermieter mit wenigen Ladepunkten.</p>
+					<div class="liste">
+						<ul class="pricing-features">
+							<li>Webportal-Nutzung</li>
+							<li>Abrechnungssystem fr bis zu 3 Wallboxen</li>
+							<li>Grundlegendes Energiemonitoring</li>
+							
+						</ul>
+					</div>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-title">Wallbox und Energiemanagement</div>
+                    <div class="pricing-price" ab="">ab 19<span style="font-size: 1rem; font-weight: normal;"> / Monat</span></div>
+                    <p class="pricing-description">Fr mittlere Unternehmen mit erweiterten Anforderungen.</p>
+					<div class="liste">
+						<ul class="pricing-features">
+							<li>Webportal-Nutzung</li>
+							<li>Abrechnungssystem fr bis zu 15 Wallboxen</li>
+							<li>Anbindung Home Assistant</li>
+							<li>Gebudesteuerung (Klima/Wrme)</li>
+							<li>Intelligente PV-Steuerung &amp; berschussladen</li>
+						</ul>
+					</div>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-title">tricoma ERP</div>
+                    <div class="pricing-price">ab 59<span style="font-size: 1rem; font-weight: normal;"> / Monat</span></div>
+                    <p class="pricing-description">Fr Konzerne, Wohnanlagen und professionelle Betreiber.</p>
+					<div class="liste">
+						<ul class="pricing-features">
+							<li>tricoma smart ERP Lsung enthalten</li>
+							<li>Alle funktionen aus den anderen Paketen</li>
+							<li>Unbegrenzte Anzahl an Ladepunkten</li>
+							<li>Vollautomatisiertes Lastmanagement</li>
+							<li>Multi-Mandantenfhigkeit</li>
+							<li>Individuelle Integrationen &amp; SLA</li>
+						</ul>
+					</div>
+                </div>
+            </div>
+			
+			<div class="section-footer">
+				<a href="https://www.tricoma.energy/Features/Alle-Features/" class="cta-button">Detailierter Paketvergleich</a>
+			</div>
+        </div>
 	</div>
-</div>
-</p>
+</section><!-- Vorteile -->
+<section id="vorteile" class="section">
+	<div class="container">
+        <div class="section-header">
+            <h2>Warum tricoma.energy?</h2>
+            <p>Messbare Vorteile fr Ihr Unternehmen</p>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <span class="benefit-icon"><img src="Kosteneinsparung.svg" class="benefit-icon-img"></span>
+                <h3>Kosteneinsparung</h3>
+                <p>Durchschnittliche Reduzierung der Energiekosten durch intelligente Steuerung</p>
+            </div>
+            <div class="benefit-card">
+                <span class="benefit-icon"><img src="24-7-Monitoring.svg" class="benefit-icon-img"></span>
+                <h3>24/7 Monitoring</h3>
+                <p>Rund-um-die-Uhr berwachung und automatische Optimierung</p>
+            </div>
+            <div class="benefit-card">
+                <span class="benefit-icon"><img src="Transparent.svg" class="benefit-icon-img"></span>
+                <h3>Transparent</h3>
+                <p>Vollstndige Transparenz bei Verbrauch und Abrechnung</p>
+            </div>
+            <div class="benefit-card">
+                <span class="benefit-icon"><img src="Setup.svg" class="benefit-icon-img"></span>
+                <h3>Setup</h3>
+                <p>Schnelle Implementierung und Inbetriebnahme</p>
+            </div>
+        </div>
+	</div>
+</section>
+<!-- Funktionsumfang -->
+<section id="funktionen" style="background: var(--white); padding: 5rem 0;">
+	<div class="container">
+        <div class="section">
+            <div class="section-header">
+                <h2>Funktionsumfang</h2>
+                <p>Entdecken Sie die vielfltigen Mglichkeiten unserer intelligenten Energieplattform</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="Live-Dashboard.svg" class="feature-icon-img"></span>
+                    <h4>Live-Dashboard</h4>
+                    <p>Echtzeitberwachung aller Verbrauchsdaten und Systemzustnde</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="RFID-und-App-Zugang.svg" class="feature-icon-img"></span>
+                    <h4>RFID &amp; App-Zugang</h4>
+                    <p>Sichere Authentifizierung ber Karten oder mobile App</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="Automatische-Abrechnung.svg" class="feature-icon-img"></span>
+                    <h4>Automatische Abrechnung</h4>
+                    <p>Monatliche Rechnungsstellung mit detaillierter Aufschlsselung</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="Dynamisches-Lastenmanagement.svg" class="feature-icon-img"></span>
+                    <h4>Dynamisches Lastmanagement</h4>
+                    <p>Intelligente Verteilung der verfgbaren Leistung</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="PV-Ueberschussladen.svg" class="feature-icon-img"></span>
+                    <h4>PV-berschussladen</h4>
+                    <p>Optimale Nutzung von selbst erzeugtem Solarstrom</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="Mobile-App.svg" class="feature-icon-img"></span>
+                    <h4>Mobile Nutzung</h4>
+                    <p>Fernsteuerung und Monitoring ber iOS/Android</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="API-Schnittstellen.svg" class="feature-icon-img"></span>
+                    <h4>API-Schnittstellen</h4>
+                    <p>Integration in bestehende Systeme und Drittsoftware</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="Verbrauchsanalysen.svg" class="feature-icon-img"></span>
+                    <h4>Verbrauchsanalyse</h4>
+                    <p>Detaillierte Reports und Trend-Analysen</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="Smart-Home-Integration.svg" class="feature-icon-img"></span>
+                    <h4>Smart Home Integration</h4>
+                    <p>Vernetzung mit Heizung, Klima und Wrmepumpe</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="Benachrichtigungen.svg" class="feature-icon-img"></span>
+                    <h4>Benachrichtigungen</h4>
+                    <p>Push-Nachrichten und E-Mail-Alerts bei Ereignissen</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="Flexible-Tarifmodelle.svg" class="feature-icon-img"></span>
+                    <h4>Flexible Tarifmodelle</h4>
+                    <p>Zeit- und verbrauchsabhngige Abrechnungsoptionen</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="Backup-und-Security.svg" class="feature-icon-img"></span>
+                    <h4>Backup &amp; Security</h4>
+                    <p>Automatische Datensicherung und Verschlsselung</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="Terminplanung.svg" class="feature-icon-img"></span>
+                    <h4>Terminplanung</h4>
+                    <p>Reservierung von Ladepltzen und Zeitfenstern</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="Multi-Standort-Verwaltung.svg" class="feature-icon-img"></span>
+                    <h4>Multi-Standort-Verwaltung</h4>
+                    <p>Zentrale Steuerung mehrerer Liegenschaften</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="Compliance-Reporting.svg" class="feature-icon-img"></span>
+                    <h4>Compliance-Reporting</h4>
+                    <p>Automatische Berichte fr Behrden und Audits</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="Remote-Wartung.svg" class="feature-icon-img"></span>
+                    <h4>Remote-Wartung</h4>
+                    <p>Ferndiagnose und Software-Updates</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="Eichrechtskonformitaet.svg" class="feature-icon-img"></span>
+                    <h4>Eichrechtskonformitt</h4>
+                    <p>Rechtssichere Messung nach deutschem Eichrecht</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="Roaming-Integration.svg" class="feature-icon-img"></span>
+                    <h4>Roaming-Integration</h4>
+                    <p>Anbindung an ffentliche Ladenetze</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="White-Label-Portal.svg" class="feature-icon-img"></span>
+                    <h4>White-Label-Portal</h4>
+                    <p>Individualisierbare Benutzeroberflche</p>
+                </div>
+                <div class="feature-box">
+                    <span class="feature-icon"><img src="Predictive-Maintenance.svg" class="feature-icon-img"></span>
+                    <h4>Predictive Maintenance</h4>
+                    <p>Vorausschauende Wartung durch KI-Analyse</p>
+                </div>
+            </div>
+			
+            <div class="more-features">
+                <h4>... und viele weitere Funktionen</h4>
+               <a href="https://www.tricoma.energy/Leistungen/" class="cta-button" style="margin-top: 1.5rem; display: inline-block;">Alle Funktionen kennenlernen</a>
+			</div>
+        </div>
+	</div>
+</section>    <!-- Leistungen -->
+<section id="leistungen">
+	<div class="container">
+        <div class="section">
+            <div class="section-header">
+                <h2>Unsere Leistungen</h2>
+                <p>Modular. Smart. Effizient. Unsere Lsungen im berblick:</p>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <span class="card-icon"><img src="Wallbox-Abrechnung.svg" class="card-icon-img"></span>
+                    <h3>Wallbox-Abrechnung</h3>
+                    <p>Automatisierte und rechtssichere Abrechnung von Ladevorgngen fr Mitarbeiter und Mieter ? einfach und transparent.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon"><img src="Energiemanagement.svg" class="card-icon-img"></span>
+                    <h3>Energiemanagement</h3>
+                    <p>Intelligente Steuerung von PV-Anlagen, berschussladen und Lastmanagement ? fr maximale Energieeffizienz.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon"><img src="Gebaudesteuerung.svg" class="card-icon-img"></span>
+                    <h3>Gebudesteuerung</h3>
+                    <p>Nahtlose Integration von Klima-, Heiz- und Wrmepumpensystemen ? fr ein smartes und nachhaltiges Gebude.</p>
+                </div>
+            </div>
+        </div>
+	</div>
+</section><p></p>
 
     <!-- Kontakt -->
-    <section id="kontakt" style="background: #ff9900; padding: 1rem 0;">
+    <section id="kontakt" style="background: var(--text-predark); padding: 1rem 0;">
         <div class="section">
             <div style="text-align: center;">
-                <h2 style="color: white; margin-bottom: 1.5rem; margin-top: 0;">Jetzt unverbindlich beraten lassen</h2>
+                <h2 style="color: white;">Jetzt unverbindlich beraten lassen</h2>
                 <p style="color: white;">Lassen Sie sich zeigen, wie Sie mit tricoma.energy Kosten sparen und gleichzeitig Ihre Nachhaltigkeitsziele erreichen.</p>
-                <a href="mailto:kontakt@tricoma.energy" class="cta-button cta-button-gray" style="margin-top: 1.5rem; display: inline-block;">E-Mail schreiben</a>
+                <a href="mailto:kontakt@tricoma.energy" class="cta-button" style="margin-top: 1.5rem; display: inline-block;">E-Mail schreiben</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer" style="background: #1c1c1c;">
+    <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-				<p>Intelligente Softwarelösungen für Energie, Mobilität & Gebäudesteuerung. Made in Germany.<br><br></p>
+				<p>Intelligente Softwarelsungen fr Energie, Mobilitt &amp; Gebudesteuerung. Made in Germany.<br><br></p>
 				
 				<p>
-					<img src="/templates/tricoma_energy/Labels/icons/made_in_germany_weiss.svg" height="60">
+					<img src="made_in_germany_weiss.svg" height="60">
 				</p>
 				
             </div>
             <div class="footer-section">
                 <h4>Produkte</h4>
                 <ul class="footer-links">
-                    <li><a href="/Features/wallbox-abrechnungssystem/" >Wallbox Abrechnungssystem</a></li><li><a href="/Features/Alle-Features/" >Alle Features</a></li><li><a href="/Branchen/BueroparksBusiness-Center/" >Büroparks & Business Center</a></li><li><a href="/Branchen/HotelsHotelketten/" >Hotels & Hotelketten</a></li><li><a href="/Branchen/Oeffentliche-Einrichtungen/" >Öffentliche Einrichtungen</a></li>
+                    <li><a href="https://www.tricoma.energy/Features/Individualisierte-Abrechnung/">Wallbox Abrechnungssystem</a></li><li><a href="https://www.tricoma.energy/Features/Alle-Features/">Alle Features</a></li><li><a href="https://www.tricoma.energy/Branchen/BueroparksBusiness-Center/">Broparks &amp; Business Center</a></li><li><a href="https://www.tricoma.energy/Branchen/HotelsHotelketten/">Hotels &amp; Hotelketten</a></li><li><a href="https://www.tricoma.energy/Branchen/Oeffentliche-Einrichtungen/">ffentliche Einrichtungen</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Unternehmen</h4>
                 <ul class="footer-links">
-                     <li><a href="/Impressum/" >Impressum</a></li><li><a href="/AGB/" >AGB</a></li><li><a href="/220ber-uns/" >&#220;ber uns</a></li><li><a href="/Datenschutz/" >Datenschutz</a></li><li><a href="/Konfigurator/" >Konfigurator</a></li><li><a href="/Cookie-Einstellungen/" >Cookie-Einstellungen</a></li><li><a href="/Prognose/" >Prognose</a></li>
+                     <li><a href="https://www.tricoma.energy/Impressum/">Impressum</a></li><li><a href="https://www.tricoma.energy/AGB/">AGB</a></li><li><a href="https://www.tricoma.energy/220ber-uns/">ber uns</a></li><li><a href="https://www.tricoma.energy/Datenschutz/">Datenschutz</a></li><li><a href="https://www.tricoma.energy/Konfigurator/">Konfigurator</a></li><li><a href="https://www.tricoma.energy/Cookie-Einstellungen/">Cookie-Einstellungen</a></li><li><a href="https://www.tricoma.energy/Prognose/">Prognose</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <p><img src="/templates/tricoma_energy/Labels/Quer_invertiert-Grau.png"  height=70></p>
+                <p><img src="Quer_invertiert-Grau.png" height="70"></p>
                 <p>info@tricoma.energy</p>
                 <p>+49 (0) 9521 / 703131 - 0</p>
-                <p style="margin-top: 2rem;">&copy; 2025 tricoma.energy</p>
+                <p style="margin-top: 2rem;"> 2025 tricoma.energy</p>
             </div>
         </div>
     </footer>
@@ -2865,12 +2417,12 @@ Mit tricoma.energy überwachst du deinen Energieverbrauch in Echtzeit, steuerst 
                 header.style.background = 'rgba(255, 255, 255, 0.25)';
                 header.style.backdropFilter = 'blur(25px) saturate(200%)';
                 header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.3)';
-                // header.style.boxShadow = '0 12px 40px rgba(0, 0, 0, 0.08)';
+                header.style.boxShadow = '0 12px 40px rgba(0, 0, 0, 0.08)';
             } else {
                 header.style.background = 'rgba(255, 255, 255, 0.15)';
                 header.style.backdropFilter = 'blur(20px) saturate(180%)';
                 header.style.borderBottom = '1px solid rgba(255, 255, 255, 0.2)';
-                // header.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.05)';
+                header.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.05)';
             }
         });
 
@@ -2900,5 +2452,20 @@ Mit tricoma.energy überwachst du deinen Energieverbrauch in Echtzeit, steuerst 
 			navMenu.classList.toggle('active');
 		});
 	</script>		
-</body>
-</html>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide/dist/js/splide.min.js"></script>
+
+	<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+	<script>
+		new Splide( '#word-slider', {
+			type      : 'loop',
+			direction : 'ttb',     // top to bottom
+			height    : 'auto',   // gleiche Hhe wie das Container-Div
+			arrows    : false,
+			pagination: false,
+			autoplay  : true,
+			drag: false,
+			interval  : 2000,      // Geschwindigkeit (ms)
+		}).mount();
+	</script>
+</body></html>
